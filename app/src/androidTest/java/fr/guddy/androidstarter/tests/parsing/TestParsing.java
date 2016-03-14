@@ -3,7 +3,8 @@ package fr.guddy.androidstarter.tests.parsing;
 import android.support.test.InstrumentationRegistry;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.bluelinelabs.logansquare.LoganSquare;
+import com.bluelinelabs.logansquare.annotation.JsonObject;
 import com.github.polok.localify.LocalifyClient;
 
 import org.frutilla.FrutillaTestRunner;
@@ -14,6 +15,7 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import fr.guddy.androidstarter.rest.dto.DTORepo;
 import fr.guddy.androidstarter.test.R;
@@ -45,18 +47,16 @@ public class TestParsing {
     )
     @Test
     public void test_Parse_JSONRepo_ParsesRepoDTO() throws IOException {
-        ObjectMapper loJSONMapper;
         String lsRepoData;
         Given:
         {
-            loJSONMapper = new ObjectMapper();
             lsRepoData = mLocalifyClient.localify().loadRawFile(R.raw.repo_octocat);
         }
 
         DTORepo loRepoDTO;
         When:
         {
-            loRepoDTO = loJSONMapper.readValue(lsRepoData, DTORepo.class);
+            loRepoDTO = LoganSquare.parse(lsRepoData, DTORepo.class);
         }
 
         Then:
@@ -66,9 +66,6 @@ public class TestParsing {
         }
     }
 
-    public static final class DTORepos extends ArrayList<DTORepo> {
-    }
-
     @Frutilla(
             Given   = "Multiple GitHub repos from a JSON file",
             When    = "Parsing this content with Jackson",
@@ -76,18 +73,16 @@ public class TestParsing {
     )
     @Test
     public void test_Parse_JSONArrayRepo_ParsesRepoAsArrayDTO() throws IOException {
-        ObjectMapper loJSONMapper;
         String lsRepoDataAsArray;
         Given:
         {
-            loJSONMapper = new ObjectMapper();
             lsRepoDataAsArray = mLocalifyClient.localify().loadRawFile(R.raw.repos_octocat);
         }
 
-        DTORepos lloRepoAsArrayDTO;
+        List<DTORepo> lloRepoAsArrayDTO;
         When:
         {
-            lloRepoAsArrayDTO = loJSONMapper.readValue(lsRepoDataAsArray, DTORepos.class);
+            lloRepoAsArrayDTO = LoganSquare.parseList(lsRepoDataAsArray, DTORepo.class);
         }
 
         Then:

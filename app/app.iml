@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="AndroidStarter" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="AndroidStarterAlt" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -106,10 +106,15 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/jp.wasabeef/takt/1.0.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/se.emilsjolander/intentbuilder-api/0.14.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/multi-dex" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/retrolambda" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
@@ -151,47 +156,46 @@
     <orderEntry type="library" exported="" name="android-priority-jobqueue-1.3.5" level="project" />
     <orderEntry type="library" exported="" name="ormgap-ormlite-extension-1.0.11" level="project" />
     <orderEntry type="library" exported="" name="library-1.0-rc3" level="project" />
-    <orderEntry type="library" exported="" name="converter-jackson-2.0.0-beta4" level="project" />
+    <orderEntry type="library" exported="" name="retrofit-2.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="frutilla-0.7.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="robotium-solo-5.5.4" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-2.4.3" level="project" />
-    <orderEntry type="library" exported="" name="jackson-databind-2.4.3" level="project" />
-    <orderEntry type="library" exported="" name="retrofit-2.0.0-beta4" level="project" />
-    <orderEntry type="library" exported="" name="dagger-2.0.2" level="project" />
+    <orderEntry type="library" exported="" name="logansquare-1.3.7" level="project" />
     <orderEntry type="library" exported="" name="okhttp-3.2.0" level="project" />
+    <orderEntry type="library" exported="" name="dagger-2.0.2" level="project" />
     <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="guava-18.0" level="project" />
     <orderEntry type="library" exported="" name="adapters-1.0-rc3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="okhttp-testing-support-3.2.0" level="project" />
-    <orderEntry type="library" exported="" name="jackson-annotations-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="rules-0.4.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="bcprov-jdk15on-1.50" level="project" />
     <orderEntry type="library" exported="" name="Switcher-1.1.3" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="okhttp-urlconnection-3.2.0" level="project" />
+    <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="frodo-runtime-0.8.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="mockito-core-1.10.19" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-commons-0.7.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="dexmaker-1.2" level="project" />
+    <orderEntry type="library" exported="" name="converter-logansquare-1.4.0" level="project" />
     <orderEntry type="library" exported="" name="icepick-2.3.6" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="logger-1.12" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-scalpel-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-0.7.0" level="project" />
-    <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="runner-0.4.1" level="project" />
+    <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" name="mvp-common-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="mvp-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-picasso-0.7.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="dexmaker-mockito-1.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="dexmaker-mockito-1.2" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="compiler-1.0-rc5" level="project" />
     <orderEntry type="library" exported="" name="frodo-api-0.8.2" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-view-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="takt-1.0.2" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" name="jackson-core-2.5.1" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-base-0.7.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
   </component>

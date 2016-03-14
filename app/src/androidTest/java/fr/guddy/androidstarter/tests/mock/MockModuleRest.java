@@ -3,6 +3,7 @@ package fr.guddy.androidstarter.tests.mock;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.github.aurae.retrofit2.LoganSquareConverterFactory;
 import com.squareup.picasso.Picasso;
 
 import dagger.Module;
@@ -13,7 +14,6 @@ import io.palaima.debugdrawer.picasso.PicassoModule;
 import okhttp3.OkHttpClient;
 import okhttp3.mockwebserver.MockWebServer;
 import retrofit2.Retrofit;
-import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import static org.mockito.Mockito.mock;
 
@@ -37,7 +37,7 @@ public class MockModuleRest extends ModuleRest {
         final Retrofit loRetrofit = new Retrofit.Builder()
                 .baseUrl(mMockWebServer.url("/").toString())
                 .client(poOkHttpClient)
-                .addConverterFactory(JacksonConverterFactory.create())
+                .addConverterFactory(LoganSquareConverterFactory.create())
                 .addCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory.MainThreadExecutor()))
                 .build();
         return loRetrofit.create(GitHubService.class);

@@ -98,7 +98,27 @@ public class ErrorHandlingExecutorCallAdapterFactory extends CallAdapter.Factory
 
         @Override
         public Response<T> execute() throws IOException {
-            return mDelegate.execute();
+            Response<T> loResponse;
+
+            try {
+                loResponse = mDelegate.execute();
+
+                if (!loResponse.isSuccessful()) {
+                    throw RetrofitException.httpError(loResponse.raw().request().url().toString(), loResponse, mRetrofit);
+                }
+            }
+            catch (final IOException loIOException) {
+                throw RetrofitException.networkError(loIOException);
+            }
+            catch (final Exception loException) {
+                if (loException instanceof RetrofitException) { // Required if to throw directly already formatted exception.
+                    throw loException;
+                } else {
+                    throw RetrofitException.unexpectedError(loException);
+                }
+            }
+
+            return loResponse;
         }
 
         @Override
@@ -136,7 +156,7 @@ public class ErrorHandlingExecutorCallAdapterFactory extends CallAdapter.Factory
 
         @Override
         public void onResponse(final Call<T> poCall, final Response<T> poResponse) {
-            if (poResponse.isSuccess()) {
+            if (poResponse.isSuccessful()) {
                 mCallbackExecutor.execute(() -> mDelegate.onResponse(poCall, poResponse));
             } else {
                 mCallbackExecutor.execute(() -> mDelegate.onFailure(poCall, RetrofitException.httpError(poResponse.raw().request().url().toString(), poResponse, mRetrofit)));

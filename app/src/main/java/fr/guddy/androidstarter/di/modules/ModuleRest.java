@@ -3,6 +3,7 @@ package fr.guddy.androidstarter.di.modules;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.github.aurae.retrofit2.LoganSquareConverterFactory;
 import com.novoda.merlin.Merlin;
 import com.novoda.merlin.MerlinsBeard;
 import com.squareup.picasso.Picasso;
@@ -19,7 +20,6 @@ import io.palaima.debugdrawer.picasso.PicassoModule;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.converter.jackson.JacksonConverterFactory;
 
 @Module
 public class ModuleRest {
@@ -40,7 +40,7 @@ public class ModuleRest {
         final Retrofit loRetrofit = new Retrofit.Builder()
                 .baseUrl("https://api.github.com")
                 .client(poOkHttpClient)
-                .addConverterFactory(JacksonConverterFactory.create())
+                .addConverterFactory(LoganSquareConverterFactory.create())
                 .addCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory.MainThreadExecutor()))
                 .build();
         return loRetrofit.create(GitHubService.class);

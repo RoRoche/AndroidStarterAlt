@@ -9,17 +9,20 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
 import autodagger.AutoInjector;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
-import fr.guddy.androidstarteralt.persistence.dao.DAORepo;
+import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import fr.guddy.androidstarteralt.rest.queries.QueryFactory;
 import fr.guddy.androidstarteralt.rest.queries.QueryGetRepos;
 import hugo.weaving.DebugLog;
+import io.requery.Persistable;
+import io.requery.rx.SingleEntityStore;
 import rx.Observable;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -34,7 +37,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
     @Inject
     EventBus eventBus;
     @Inject
-    DAORepo daoRepo;
+    SingleEntityStore<Persistable> dataStore;
     @Inject
     QueryFactory queryFactory;
     //endregion
@@ -84,21 +87,15 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
             return;
         }
 
-        mSubscriptionGetRepos = rxGetRepos()
+        final ArrayList<RepoEntity> lloRepos = new ArrayList<>();
+        mSubscriptionGetRepos = dataStore.select(RepoEntity.class)
+                .get()
+                .toObservable()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         // onNext
-                        (final List<RepoEntity> ploRepos) -> {
-                            if (isViewAttached()) {
-                                loView.setData(new ModelRepoList(ploRepos));
-                                if (ploRepos == null || ploRepos.isEmpty()) {
-                                    loView.showEmpty();
-                                } else {
-                                    loView.showContent();
-                                }
-                            }
-                        },
+                        (final RepoEntity poRepo) -> lloRepos.add(poRepo),
                         // onError
                         (final Throwable poException) -> {
                             if (isViewAttached()) {
@@ -107,14 +104,18 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
                             unsubscribe();
                         },
                         // onCompleted
-                        this::unsubscribe
+                        () -> {
+                            if (isViewAttached()) {
+                                loView.setData(new ModelRepoList(lloRepos));
+                                if (lloRepos == null || lloRepos.isEmpty()) {
+                                    loView.showEmpty();
+                                } else {
+                                    loView.showContent();
+                                }
+                            }
+                            unsubscribe();
+                        }
                 );
-    }
-    //endregion
-
-    //region Database job
-    private Observable<List<RepoEntity>> rxGetRepos() {
-        return daoRepo.rxQueryForAll();
     }
     //endregion
 

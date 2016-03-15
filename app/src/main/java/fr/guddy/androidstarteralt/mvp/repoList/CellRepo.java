@@ -16,6 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
 import fr.guddy.androidstarteralt.R;
+import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import io.nlopez.smartadapters.views.BindableFrameLayout;
 
@@ -52,9 +53,9 @@ public class CellRepo extends BindableFrameLayout<RepoEntity> {
 
     @Override
     public void bind(@NonNull final RepoEntity poRepo) {
-        mTextView.setText(poRepo.url);
+        mTextView.setText(poRepo.getUrl());
 
-        final RequestCreator loRequest = mPicasso.load(poRepo.avatarUrl);
+        final RequestCreator loRequest = mPicasso.load(poRepo.getAvatarUrl());
         if (loRequest != null) {
             loRequest
                     .placeholder(R.drawable.git_icon)

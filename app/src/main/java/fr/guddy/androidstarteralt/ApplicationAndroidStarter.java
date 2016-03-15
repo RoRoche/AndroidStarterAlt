@@ -3,7 +3,6 @@ package fr.guddy.androidstarteralt;
 import android.app.Application;
 import android.os.StrictMode;
 
-import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.novoda.merlin.Merlin;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
@@ -19,7 +18,6 @@ import fr.guddy.androidstarteralt.di.modules.ModuleContext;
 import fr.guddy.androidstarteralt.di.modules.ModuleDatabase;
 import fr.guddy.androidstarteralt.di.modules.ModuleEnvironment;
 import fr.guddy.androidstarteralt.di.modules.ModuleRest;
-import fr.guddy.androidstarteralt.di.modules.ModuleTransformer;
 
 @AutoComponent(
         modules = {
@@ -29,7 +27,6 @@ import fr.guddy.androidstarteralt.di.modules.ModuleTransformer;
                 ModuleDatabase.class,
                 ModuleEnvironment.class,
                 ModuleRest.class,
-                ModuleTransformer.class
         }
 )
 @Singleton
@@ -79,7 +76,6 @@ public class ApplicationAndroidStarter extends Application {
     public void onTerminate() {
         super.onTerminate();
         sSharedApplication = null;
-        OpenHelperManager.releaseHelper();
         merlin.unbind();
     }
     //endregion
@@ -99,7 +95,6 @@ public class ApplicationAndroidStarter extends Application {
                 .moduleDatabase(new ModuleDatabase())
                 .moduleEnvironment(new ModuleEnvironment())
                 .moduleRest(new ModuleRest())
-                .moduleTransformer(new ModuleTransformer())
                 .build();
     }
     //endregion

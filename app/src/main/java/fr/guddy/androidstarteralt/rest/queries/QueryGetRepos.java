@@ -1,25 +1,23 @@
 package fr.guddy.androidstarteralt.rest.queries;
 
-import com.j256.ormlite.dao.Dao;
-import com.mobandme.android.transformer.Transformer;
 import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import autodagger.AutoInjector;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
 import fr.guddy.androidstarteralt.BuildConfig;
 import fr.guddy.androidstarteralt.bus.event.AbstractEventQueryDidFinish;
-import fr.guddy.androidstarteralt.di.modules.ModuleTransformer;
-import fr.guddy.androidstarteralt.persistence.dao.DAORepo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import fr.guddy.androidstarteralt.rest.GitHubService;
 import fr.guddy.androidstarteralt.rest.dto.DTORepo;
+import io.requery.Persistable;
+import io.requery.rx.SingleEntityStore;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -34,10 +32,7 @@ public class QueryGetRepos extends AbstractQuery {
     @Inject
     transient EventBus eventBus;
     @Inject
-    transient DAORepo daoRepo;
-    @Inject
-    @Named(ModuleTransformer.TRANSFORMER_REPO)
-    transient Transformer transformerRepo;
+    transient SingleEntityStore<Persistable> dataStore;
     //endregion
 
     //region Fields
@@ -68,25 +63,23 @@ public class QueryGetRepos extends AbstractQuery {
         final Response<List<DTORepo>> loExecute = loCall.execute();
         results = loExecute.body();
 
-        final int liDeleted = daoRepo.deleteBuilder().delete();
+        final int liDeleted = dataStore.delete(RepoEntity.class).get().value();
 
         if (BuildConfig.DEBUG && DEBUG) {
             Logger.t(TAG).d("deleted row count = %d", liDeleted);
         }
 
-        int liCount = 0;
+        final ArrayList<RepoEntity> lloEntities = new ArrayList<>();
         for (final DTORepo loDTORepo : results) {
-            final RepoEntity loRepo = transformerRepo.transform(loDTORepo, RepoEntity.class);
-            loRepo.avatarUrl = loDTORepo.owner.avatarUrl;
-            final Dao.CreateOrUpdateStatus loStatus = daoRepo.createOrUpdate(loRepo);
-            if (loStatus.isCreated() || loStatus.isUpdated()) {
-                ++liCount;
-            }
+            final RepoEntity loRepo = new RepoEntity();
+            loRepo.setAvatarUrl(loDTORepo.owner.avatarUrl);
+            loRepo.setDescription(loDTORepo.description);
+            loRepo.setUid(loDTORepo.id);
+            loRepo.setName(loDTORepo.name);
+            loRepo.setUrl(loDTORepo.url);
+            lloEntities.add(loRepo);
         }
-
-        if (BuildConfig.DEBUG && DEBUG) {
-            Logger.t(TAG).d("created or updated row count = %d", liCount);
-        }
+        dataStore.insert(lloEntities).toBlocking().value();
     }
 
     @Override

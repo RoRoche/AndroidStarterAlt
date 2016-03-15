@@ -19,7 +19,7 @@ import com.hannesdorfmann.mosby.mvp.MvpFragment;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.R;
-import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
+import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import pl.aprilapps.switcher.Switcher;
 
 @FragmentWithArgs
@@ -128,7 +128,7 @@ public class FragmentRepoDetail
         final Activity loActivity = this.getActivity();
         final CollapsingToolbarLayout loAppBarLayout = (CollapsingToolbarLayout) loActivity.findViewById(R.id.ActivityRepoDetail_ToolbarLayout);
         if (loAppBarLayout != null) {
-            loAppBarLayout.setTitle(poData.repo.name);
+            loAppBarLayout.setTitle(poData.repo.getName());
         }
     }
 
@@ -143,9 +143,9 @@ public class FragmentRepoDetail
     //endregion
 
     //region Specific method
-    private void configureViewWithRepo(@NonNull final RepoEntity poRepo) {
-        mTextViewDescription.setText(poRepo.description);
-        mTextViewUrl.setText(poRepo.url);
+    private void configureViewWithRepo(@NonNull final Repo poRepo) {
+        mTextViewDescription.setText(poRepo.getDescription());
+        mTextViewUrl.setText(poRepo.getUrl());
     }
     //endregion
 }

@@ -6,9 +6,10 @@ import javax.inject.Inject;
 
 import autodagger.AutoInjector;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
-import fr.guddy.androidstarteralt.persistence.dao.DAORepo;
+import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
-import rx.Observable;
+import io.requery.Persistable;
+import io.requery.rx.SingleEntityStore;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -18,7 +19,7 @@ public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> 
 
     //region Injected fields
     @Inject
-    DAORepo daoRepo;
+    SingleEntityStore<Persistable> dataStore;
     //endregion
 
     //region Fields
@@ -61,12 +62,15 @@ public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> 
             return;
         }
 
-        mSubscriptionGetRepo = rxGetRepo(plRepoId)
+        mSubscriptionGetRepo = dataStore.select(RepoEntity.class)
+                .where(RepoEntity.BASE_ID.eq(plRepoId))
+                .get()
+                .toObservable()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         // onNext
-                        (final RepoEntity poRepo) -> {
+                        (final Repo poRepo) -> {
                             if (isViewAttached()) {
                                 loView.setData(new ModelRepoDetail(poRepo));
                                 if (poRepo == null) {
@@ -86,12 +90,6 @@ public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> 
                         // onCompleted
                         this::unsubscribe
                 );
-    }
-    //endregion
-
-    //region Database job
-    private Observable<RepoEntity> rxGetRepo(final long plRepoId) {
-        return daoRepo.rxQueryForId(plRepoId);
     }
     //endregion
 

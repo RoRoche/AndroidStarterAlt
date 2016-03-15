@@ -11,7 +11,7 @@ generatedId=true
 # --table-end--
 #################################
 # --table-start--
-dataClass=fr.guddy.androidstarteralt.persistence.entities.RepoEntity
+dataClass=fr.guddy.androidstarteralt.persistence.entities.Repo
 tableName=REPO
 # --table-fields-start--
 # --field-start--

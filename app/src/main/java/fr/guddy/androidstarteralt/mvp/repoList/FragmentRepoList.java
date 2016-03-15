@@ -20,6 +20,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.R;
+import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import hugo.weaving.DebugLog;
 import icepick.Icepick;
@@ -29,7 +30,7 @@ import pl.aprilapps.switcher.Switcher;
 
 public class FragmentRepoList
         extends MvpViewStateFragment<ViewRepoList, PresenterRepoList>
-        implements ViewRepoList, ViewEventListener<RepoEntity>, SwipeRefreshLayout.OnRefreshListener {
+        implements ViewRepoList, ViewEventListener<Repo>, SwipeRefreshLayout.OnRefreshListener {
 
     //region Mock callback constant
     /**
@@ -154,7 +155,7 @@ public class FragmentRepoList
     //region ViewEventListener
     @DebugLog
     @Override
-    public void onViewEvent(final int piActionID, final RepoEntity poRepo, final int piPosition, final View poView) {
+    public void onViewEvent(final int piActionID, final Repo poRepo, final int piPosition, final View poView) {
         if (piActionID == CellRepo.ROW_PRESSED) {
             mCallbacks.onItemSelected(poRepo.getBaseId());
         }

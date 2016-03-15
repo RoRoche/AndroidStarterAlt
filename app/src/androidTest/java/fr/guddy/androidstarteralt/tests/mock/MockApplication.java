@@ -6,7 +6,6 @@ import fr.guddy.androidstarteralt.di.modules.ModuleAsync;
 import fr.guddy.androidstarteralt.di.modules.ModuleBus;
 import fr.guddy.androidstarteralt.di.modules.ModuleContext;
 import fr.guddy.androidstarteralt.di.modules.ModuleEnvironment;
-import fr.guddy.androidstarteralt.di.modules.ModuleTransformer;
 
 public class MockApplication extends ApplicationAndroidStarter {
 
@@ -46,7 +45,6 @@ public class MockApplication extends ApplicationAndroidStarter {
                 .moduleDatabase(new MockModuleDatabase())
                 .moduleEnvironment(mModuleEnvironment)
                 .moduleRest(mModuleRest)
-                .moduleTransformer(new ModuleTransformer())
                 .build();
     }
     //endregion

@@ -1,4 +1,4 @@
-# AndroidStarter
+# AndroidStarterAlt
 A sample Android app using the MVP architecture.
 
 Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one uses:

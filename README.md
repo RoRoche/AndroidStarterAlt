@@ -8,3 +8,7 @@ Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one 
 * [LoganSquare](https://github.com/bluelinelabs/LoganSquare) as JSON parsing layer
 
 It allowed me to write less code and delete some classes written in the <https://github.com/RoRoche/AndroidStarter> repository.
+
+Test it:
+- [ ] <http://hannesdorfmann.com/android/let-mosby-flow>
+- [ ] <https://github.com/requery/sqlite-android>

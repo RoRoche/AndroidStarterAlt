@@ -11,4 +11,3 @@ It allowed me to write less code and delete some classes written in the <https:/
 
 Test it:
 - [ ] <http://hannesdorfmann.com/android/let-mosby-flow>
-- [ ] <https://github.com/requery/sqlite-android>

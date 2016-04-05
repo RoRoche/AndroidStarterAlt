@@ -6,9 +6,17 @@ buildscript {
             url 'https://oss.sonatype.org/content/repositories/snapshots'
         }
     }
+    dependencies {
+        // replace with the current version of the Android plugin
+        classpath 'com.android.tools.build:gradle:1.3.0'
+        // the latest version of the android-apt plugin
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
 }
 
 apply plugin: 'com.android.application'
+
+apply plugin: 'com.neenbedankt.android-apt'
 
 apply plugin: 'com.fernandocejas.frodo'
 apply plugin: 'com.jakewharton.hugo'
@@ -123,9 +131,9 @@ dependencies {
 
     provided 'javax.annotation:jsr250-api:1.0'
 
-    compile 'io.requery:requery:1.0.0-beta5'
-    compile 'io.requery:requery-android:1.0.0-beta5'
-    apt 'io.requery:requery-processor:1.0.0-beta5'
+    compile 'io.requery:requery:1.0.0-beta11'
+    compile 'io.requery:requery-android:1.0.0-beta11'
+    apt 'io.requery:requery-processor:1.0.0-beta11'
 
     compile 'com.github.orhanobut:logger:1.12'
 

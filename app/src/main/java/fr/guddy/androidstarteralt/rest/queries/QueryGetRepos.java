@@ -38,7 +38,7 @@ public class QueryGetRepos extends AbstractQuery {
     //region Fields
     public final boolean pullToRefresh;
     public final String user;
-    public List<DTORepo> results;
+    transient public List<DTORepo> results;
     //endregion
 
     //region Constructor matching super

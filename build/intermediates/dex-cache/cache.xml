@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.6/a7db7ea5f7bb18a1cbd9f24edd0e666504800be/aspectjrt-1.8.6.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0a7db7ea5f7bb18a1cbd9f24edd0e666504800be">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/aspectjrt-1.8.6_b54846c53a6b6a4402e867b057ab53d4aaa6a0be/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_b02d2f44c5e04e05c6d713d0c4b4ef5fcfb3a194/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-7.0.1_cf5d376d0a814f52aa8416d016bf69f0b230b6fe/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.github.lukaspili.autodagger2/autodagger2/1.1/80de050481ac59d920d4fe0ed8a33d14cf8f7902/autodagger2-1.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="80de050481ac59d920d4fe0ed8a33d14cf8f7902">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/autodagger2-1.1_b33d7771463d15c6ec85761062c2fb5600715785/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_64cdf6d766821f0ac6e8575374e3db29e2d24436/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.jakewharton.hugo/hugo-annotations/1.2.1/b01150795c5cdca1eb7e501bf00f105ff0e31501/hugo-annotations-1.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b01150795c5cdca1eb7e501bf00f105ff0e31501">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/hugo-annotations-1.2.1_5c21804ad82cd56b0b53afadd2c4165dd7267caf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8ee3aca9e4e2b258ae4eb0d77bc31dae7f39c436">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-0.7.0_5e9184acca4c466ad382fcac97050c86597f71eb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.requery/requery-android/1.0.0-beta16/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a210fc8a42ddd9a9a9c74402a1e6fa908753f47c">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.requery-requery-android-1.0.0-beta16_8dfdc1747c823bdbd216b534af0177a8b62f538e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.5.1/e2a00ad1d7e540ec395e9296a34da484c8888d4d/jackson-core-2.5.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e2a00ad1d7e540ec395e9296a34da484c8888d4d">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.5.1_a146ebc9a1ef6c2c38770a9f9b2ed4d1484f50a3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.3/5a1aef6a9d56efb473b8be6b66689077e7317c45/rxjava-1.1.3.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5a1aef6a9d56efb473b8be6b66689077e7317c45">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.3_8ca4752ad4db4ee2ae837f162866b3d50fa4c0fa/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_f9ef98344da8cc54efeec51788588eb40b11b22e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.github.frankiesardo/icepick/2.3.6/c67092eec40738c16bdc5b9255a59c295cc16219/icepick-2.3.6.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c67092eec40738c16bdc5b9255a59c295cc16219">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/icepick-2.3.6_6670fbb19f3984a763d84c4128f715f2b709337f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.github.jkwiecien/Switcher/1.1.3/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2e3795be9d7a23b3b558f2b1724dc55c018dcf07">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.jkwiecien-Switcher-1.1.3_7959ee75cab598a23e0d7e9f12fb22795feb3b73/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b913a65f4cc5fe8366f89045fe7e24d0fd1c089c">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_297960e72cb83b345f95bf5490039b44639515f8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_fad0cf6299fcd666587f87e617570f83017a504b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.fernandocejas.frodo/frodo-runtime/0.8.2/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="917c9d7766ae119a13dc7109da02348d6c9f2a72">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.fernandocejas.frodo-frodo-runtime-0.8.2_fccccd16a9ee7e969ac3cb333ff1197c78f24d36/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.github.orhanobut/logger/1.12/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ecb9f39f775f414b18c7c61b4f71345f2ae8f738">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.orhanobut-logger-1.12_a0cd33d21c06d5b2519aa298604db542a1fff1ef/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.hannesdorfmann.fragmentargs/annotation/3.0.2/59da4bbec89ffa4b156cc1ddca44dde4dcea9ac5/annotation-3.0.2.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="59da4bbec89ffa4b156cc1ddca44dde4dcea9ac5">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/annotation-3.0.2_eb2d7d9a20416cc13a820334ba9ea507f6ad44c4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.jakewharton.scalpel/scalpel/1.1.2/5ba0479abcf273a2c252dc65d47e4d5b95b2f700/scalpel-1.1.2.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5ba0479abcf273a2c252dc65d47e4d5b95b2f700">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/scalpel-1.1.2_7455df3111dcd5dce9288f70fe6a99e6a80a8e3d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.hannesdorfmann.mosby/mvp/2.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8d5f68a8fdd8283ea42b20259ae4adad9cbe5e94">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.hannesdorfmann.mosby-mvp-2.0.1_b6e7b810e7f1efe57fa0a57174d0066ae0a1ed84/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.4/6b290a792253035c9fcc912d6a4d7efb3e850211/dagger-2.4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6b290a792253035c9fcc912d6a4d7efb3e850211">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/dagger-2.4_1b517342b459387da1407c26dbdf478d49794eba/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_4a5f161627ec795450c197482b4b2fc14748672c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/javax.inject-1_f162ef6b3a0a4fd4b79836f19392d0e6d1f2c7f4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/jp.wasabeef/takt/1.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2798f7f8c2f0257e1a49daa72fde9c7101e5c3f2">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/jp.wasabeef-takt-1.0.2_95ddc8eb595adc92473231a704adb029daff1dc9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_202ca7339c0ff502ebd27819487b708ed15bb47c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-picasso/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="373b6d7920b9e51d6501c455c4f9202560cf5749">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-picasso-0.7.0_7bdc54d64f6c797a91baeb32ed09021be7757315/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_f1d862191aae24ae2d9f675a025bbd2870b8d561/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_310c8dab2758dfc6744dac7b8abef0abae1a6c15/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.nlopez.smartadapters/library/1.3.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="97ef155e31039e0888ef41f3041d5ad2821cf895">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.nlopez.smartadapters-library-1.3.1_14c324aef48e186020d5ab607dc9b731e587b126/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.jakewharton.hugo/hugo-runtime/1.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2bac9385ea008561a30419c09e9230a8681b3e09">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton.hugo-hugo-runtime-1.2.1_c9568fec656a40e243cb3a2c5dc4c3d188c8f234/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.fernandocejas.frodo/frodo-api/0.8.2/4841f5dc6ef2ccc848191960dfcc901bdc666939/frodo-api-0.8.2.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4841f5dc6ef2ccc848191960dfcc901bdc666939">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/frodo-api-0.8.2_1a32219715f4f485b21a6166244021dc0d627082/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/se.emilsjolander/intentbuilder-api/0.14.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e8b62c5337033ea1a164b7d7645cd90fe3efcc6b">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/se.emilsjolander-intentbuilder-api-0.14.0_ba05925bc6c2f209c4379d23626d0c3cac792da6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_2c2ca43669a1d45746ca133f9ea050872f7bb455/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_0951e56b88d5207ed29102ecfbb1444e40dcefa5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-fps/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="06dbc4d7c17f1baf9406449d02243ffa31df773f">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-fps-0.7.0_facc457193f21c6e181d70e7a459092bbf0f0294/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.bluelinelabs/logansquare/1.3.7/21faabea32cf348b11f20bd035f61c82114b2438/logansquare-1.3.7.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="21faabea32cf348b11f20bd035f61c82114b2438">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/logansquare-1.3.7_2d47807f323ec9e0e69baa0df6faf72d7d31a021/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-base/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7e059dd5885aa22c9f7dbc2b7970bedd650331d1">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-base-0.7.0_8578d0847d639783b8bb0d994e45817125001458/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_72352d2e963eff7f483288e1ed66b93d7c83f4ab/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_c12767567f8fc61cd4b2a3a22fa2f637313007b3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.github.aurae.retrofit2/converter-logansquare/1.4.0/322af2f0bf61e44862de81e7c70f1166f07c6ec6/converter-logansquare-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="322af2f0bf61e44862de81e7c70f1166f07c6ec6">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-logansquare-1.4.0_57440ed281bd4d072f300b83e9d8ae2f5de89440/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.2.0/a56f28d5b7fab623c6c1d2afa08dd496d873ac21/logging-interceptor-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.2.0_e2d0758a56a884300dfafc3cef572c3790b86f68/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="03a1619464356cc80013d5805f692526f39e8896">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c8722db91e34ab7641eea3d07cac559cf693ab56/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.2.0/6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c/okhttp-urlconnection-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-urlconnection-3.2.0_cbd46b4a656dea504c0b44d7f3f899c9e678bab8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-scalpel/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d0dc0f8fbc92abc13df803f9320e513dbaccdbc6">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-scalpel-0.7.0_e1ee5f70e9601fe679f6b3eb0fa365c47f4fba76/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-commons/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b2c7268fbe65d4cbf150032bb7eb9e3e2abd4009">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-commons-0.7.0_1fe1de5beb9c01515d96990b764c45cd705d5e42/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.birbit/android-priority-jobqueue/2.0.0-alpha2/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5bdeea8049bc72eac74cc204190d228fdbd38d76">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.birbit-android-priority-jobqueue-2.0.0-alpha2_1b5ac1eccf008ae079e58cc370b5c48a298ffceb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_065ef762473556ed955d29494e4a4ea5a4bf8534/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/com.hannesdorfmann.mosby/mvp-common/2.0.1/d75c9c5577143f3cf3fd63f61526a551f910b56f/mvp-common-2.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d75c9c5577143f3cf3fd63f61526a551f910b56f">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/mvp-common-2.0.1_f0d8d329da5e42fc6efe4c5394a22d3edb38b10f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_0020eeb34fad04d10e6453c6cccd52f4f0faf6c6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.hannesdorfmann.mosby/viewstate/2.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="66898369cdbdcd732d7b0143aa12010cf4814005">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.hannesdorfmann.mosby-viewstate-2.0.1_68602d668c5be7efcbe1fee5564ab29e0a159c0b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-view/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7242f5af4e0ded59fe787357ee3257e08c1b35f5">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.palaima.debugdrawer-debugdrawer-view-0.7.0_552aba7dd36ae4b06f031b7c6033e5d23860884e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.1.0_ec2ac9c27e8b1ec090ae051b79729670c29e7d09/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.novoda/merlin/0.7.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="aa5a69ef2d828a285a1b914b77be40d4ada7f9a2">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.novoda-merlin-0.7.0_09c3b58625ae59050ca99bd66c8db6409cbb0592/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/.gradle/caches/modules-2/files-2.1/io.requery/requery/1.0.0-beta16/9eb27799cc761f8b268171a85e7e249d7462f12d/requery-1.0.0-beta16.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9eb27799cc761f8b268171a85e7e249d7462f12d">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/requery-1.0.0-beta16_4a311e9c02d2222aa1f8b388dba738a2d7d5604f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/exploded-aar/com.github.polok.localify/localify/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="351ebf502ba0ff2d79d3e25121017ed5956a2ecc">
+        <dex dex="/Users/Romain/GitHub/AndroidStarterAlt/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.polok.localify-localify-1.0.0_2b93ef30f69abc63588ee4ece94cec65da8452dc/classes.dex" />
+    </item>
+
+</items>

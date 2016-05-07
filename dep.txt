@@ -1,0 +1,873 @@
+Parallel execution with configuration on demand is an incubating feature.
+Observed package id 'add-ons;addon-google_apis-google-19' in inconsistent location '/Users/Romain/Library/Android/sdk/add-ons/addon-google_apis-google-19-1' (Expected '/Users/Romain/Library/Android/sdk/add-ons/addon-google_apis-google-19')
+Jack is required to support java 8 language features.
+Incremental java compilation is an incubating feature.
+Jack is required to support java 8 language features.
+WARNING: Conflict with dependency 'com.android.support:support-annotations'. Resolved versions for app (23.3.0) and test app (23.0.1) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
+:app:dependencies
+
+------------------------------------------------------------
+Project :app
+------------------------------------------------------------
+
+_debugAndroidTestApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex-instrumentation:1.0.1
+|    \--- com.android.support:multidex:1.0.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    \--- com.android.support:support-annotations:23.0.1
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
++--- com.jayway.android.robotium:robotium-solo:5.5.4
++--- com.squareup.okhttp3:mockwebserver:3.2.0
+|    +--- com.squareup.okhttp3:okhttp:3.2.0
+|    |    \--- com.squareup.okio:okio:1.6.0
+|    +--- com.squareup.okhttp3:okhttp-ws:3.2.0
+|    |    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.50
+|    \--- junit:junit:4.11 -> 4.12 (*)
++--- com.google.truth:truth:0.28
+|    +--- com.google.guava:guava:18.0
+|    \--- junit:junit:4.10 -> 4.12 (*)
++--- com.github.ignaciotcrespo:frutilla:0.7.1
+|    \--- junit:junit:4.12 (*)
++--- org.mockito:mockito-core:1.10.19
+|    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    \--- org.objenesis:objenesis:2.1
++--- com.google.dexmaker:dexmaker-mockito:1.2
+|    +--- com.google.dexmaker:dexmaker:1.2
+|    \--- org.mockito:mockito-core:1.9.5 -> 1.10.19 (*)
+\--- com.squareup.okhttp3:okhttp-testing-support:3.2.0
+     \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+
+_debugAndroidTestCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex-instrumentation:1.0.1
+|    \--- com.android.support:multidex:1.0.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    \--- com.android.support:support-annotations:23.0.1
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
++--- com.jayway.android.robotium:robotium-solo:5.5.4
++--- com.squareup.okhttp3:mockwebserver:3.2.0
+|    +--- com.squareup.okhttp3:okhttp:3.2.0
+|    |    \--- com.squareup.okio:okio:1.6.0
+|    +--- com.squareup.okhttp3:okhttp-ws:3.2.0
+|    |    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.50
+|    \--- junit:junit:4.11 -> 4.12 (*)
++--- com.google.truth:truth:0.28
+|    +--- com.google.guava:guava:18.0
+|    \--- junit:junit:4.10 -> 4.12 (*)
++--- com.github.ignaciotcrespo:frutilla:0.7.1
+|    \--- junit:junit:4.12 (*)
++--- org.mockito:mockito-core:1.10.19
+|    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    \--- org.objenesis:objenesis:2.1
++--- com.google.dexmaker:dexmaker-mockito:1.2
+|    +--- com.google.dexmaker:dexmaker:1.2
+|    \--- org.mockito:mockito-core:1.9.5 -> 1.10.19 (*)
+\--- com.squareup.okhttp3:okhttp-testing-support:3.2.0
+     \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+
+_debugApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.fernandocejas.frodo:frodo-api:0.8.2
++--- com.jakewharton.hugo:hugo-annotations:1.2.1
++--- com.android.support:appcompat-v7:23.3.0
+|    +--- com.android.support:support-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-v4:23.3.0
+|    |         \--- com.android.support:support-annotations:23.3.0
+|    +--- com.android.support:animated-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-vector-drawable:23.3.0 (*)
+|    \--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:design:23.3.0
+|    +--- com.android.support:appcompat-v7:23.3.0 (*)
+|    +--- com.android.support:support-v4:23.3.0 (*)
+|    \--- com.android.support:recyclerview-v7:23.3.0
+|         +--- com.android.support:support-v4:23.3.0 (*)
+|         \--- com.android.support:support-annotations:23.3.0
++--- com.android.support:support-annotations:23.3.0
++--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.android.support:recyclerview-v7:23.2.1 -> 23.3.0 (*)
++--- com.jakewharton:butterknife:7.0.1
++--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-api:0.14.0
++--- com.github.frankiesardo:icepick:2.3.6
++--- io.nlopez.smartadapters:library:1.3.1
+|    \--- com.android.support:recyclerview-v7:23.1.0 -> 23.3.0 (*)
++--- com.github.jkwiecien:Switcher:1.1.3
++--- com.squareup.okhttp3:okhttp:3.2.0
+|    \--- com.squareup.okio:okio:1.6.0
++--- com.squareup.okhttp3:okhttp-urlconnection:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.squareup.retrofit2:retrofit:2.0.2
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.github.aurae.retrofit2:converter-logansquare:1.4.0
+|    +--- com.bluelinelabs:logansquare:1.3.7
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.5.1
+|    \--- com.squareup.retrofit2:retrofit:2.0.0 -> 2.0.2 (*)
++--- com.squareup.okhttp3:logging-interceptor:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.bluelinelabs:logansquare:1.3.7 (*)
++--- com.google.dagger:dagger:2.4
+|    \--- javax.inject:javax.inject:1
++--- io.requery:requery:1.0.0-beta16
++--- io.requery:requery-android:1.0.0-beta16
++--- com.github.orhanobut:logger:1.12
++--- io.reactivex:rxandroid:1.1.0
+|    \--- io.reactivex:rxjava:1.1.0 -> 1.1.3
++--- io.reactivex:rxjava:1.1.3
++--- com.birbit:android-priority-jobqueue:1.3.5
++--- org.greenrobot:eventbus:3.0.0
++--- com.novoda:merlin:0.7.0
+|    \--- com.android.support:support-v4:23.0.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:mvp:2.0.1
+|    +--- com.hannesdorfmann.mosby:mvp-common:2.0.1
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate:2.0.1
+|    \--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
++--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
+|    +--- com.bluelinelabs:conductor:1.1.4
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0 (*)
+|    \--- com.hannesdorfmann.mosby:viewstate:2.0.1 (*)
++--- com.bluelinelabs:conductor:1.1.4 (*)
++--- com.github.polok.localify:localify:1.0.0
+|    \--- com.android.support:appcompat-v7:22.1.1 -> 23.3.0 (*)
++--- com.squareup.picasso:picasso:2.5.2
++--- io.palaima.debugdrawer:debugdrawer-commons:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-picasso:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-fps:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- com.jakewharton.scalpel:scalpel:1.1.2
++--- jp.wasabeef:takt:1.0.2
++--- org.aspectj:aspectjrt:1.8.6
++--- com.fernandocejas.frodo:frodo-runtime:0.8.2
++--- com.jakewharton.hugo:hugo-runtime:1.2.1
+|    +--- com.jakewharton.hugo:hugo-annotations:1.2.1
+|    \--- org.aspectj:aspectjrt:1.8.5 -> 1.8.6
++--- org.aspectj:aspectjrt:1.8.5 -> 1.8.6
++--- io.palaima.debugdrawer:debugdrawer:0.7.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
+|    +--- io.palaima.debugdrawer:debugdrawer-view:0.7.0
+|    |    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+|    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+\--- io.palaima.debugdrawer:debugdrawer-view:0.7.0 (*)
+
+_debugCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.fernandocejas.frodo:frodo-api:0.8.2
++--- com.jakewharton.hugo:hugo-annotations:1.2.1
++--- com.android.support:appcompat-v7:23.3.0
+|    +--- com.android.support:support-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-v4:23.3.0
+|    |         \--- com.android.support:support-annotations:23.3.0
+|    +--- com.android.support:animated-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-vector-drawable:23.3.0 (*)
+|    \--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:design:23.3.0
+|    +--- com.android.support:appcompat-v7:23.3.0 (*)
+|    +--- com.android.support:support-v4:23.3.0 (*)
+|    \--- com.android.support:recyclerview-v7:23.3.0
+|         +--- com.android.support:support-v4:23.3.0 (*)
+|         \--- com.android.support:support-annotations:23.3.0
++--- com.android.support:support-annotations:23.3.0
++--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.android.support:recyclerview-v7:23.2.1 -> 23.3.0 (*)
++--- com.jakewharton:butterknife:7.0.1
++--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-api:0.14.0
++--- com.github.frankiesardo:icepick:2.3.6
++--- io.nlopez.smartadapters:library:1.3.1
+|    \--- com.android.support:recyclerview-v7:23.1.0 -> 23.3.0 (*)
++--- com.github.jkwiecien:Switcher:1.1.3
++--- com.squareup.okhttp3:okhttp:3.2.0
+|    \--- com.squareup.okio:okio:1.6.0
++--- com.squareup.okhttp3:okhttp-urlconnection:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.squareup.retrofit2:retrofit:2.0.2
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.github.aurae.retrofit2:converter-logansquare:1.4.0
+|    +--- com.bluelinelabs:logansquare:1.3.7
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.5.1
+|    \--- com.squareup.retrofit2:retrofit:2.0.0 -> 2.0.2 (*)
++--- com.squareup.okhttp3:logging-interceptor:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.bluelinelabs:logansquare:1.3.7 (*)
++--- com.google.dagger:dagger:2.4
+|    \--- javax.inject:javax.inject:1
++--- io.requery:requery:1.0.0-beta16
++--- io.requery:requery-android:1.0.0-beta16
++--- com.github.orhanobut:logger:1.12
++--- io.reactivex:rxandroid:1.1.0
+|    \--- io.reactivex:rxjava:1.1.0 -> 1.1.3
++--- io.reactivex:rxjava:1.1.3
++--- com.birbit:android-priority-jobqueue:1.3.5
++--- org.greenrobot:eventbus:3.0.0
++--- com.novoda:merlin:0.7.0
+|    \--- com.android.support:support-v4:23.0.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:mvp:2.0.1
+|    +--- com.hannesdorfmann.mosby:mvp-common:2.0.1
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate:2.0.1
+|    \--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
++--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
+|    +--- com.bluelinelabs:conductor:1.1.4
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0 (*)
+|    \--- com.hannesdorfmann.mosby:viewstate:2.0.1 (*)
++--- com.bluelinelabs:conductor:1.1.4 (*)
++--- com.github.polok.localify:localify:1.0.0
+|    \--- com.android.support:appcompat-v7:22.1.1 -> 23.3.0 (*)
++--- com.squareup.picasso:picasso:2.5.2
++--- io.palaima.debugdrawer:debugdrawer-commons:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-picasso:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-fps:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- com.jakewharton.scalpel:scalpel:1.1.2
++--- jp.wasabeef:takt:1.0.2
++--- org.aspectj:aspectjrt:1.8.6
++--- com.fernandocejas.frodo:frodo-runtime:0.8.2
++--- com.jakewharton.hugo:hugo-runtime:1.2.1
+|    +--- com.jakewharton.hugo:hugo-annotations:1.2.1
+|    \--- org.aspectj:aspectjrt:1.8.5 -> 1.8.6
++--- org.aspectj:aspectjrt:1.8.5 -> 1.8.6
++--- io.palaima.debugdrawer:debugdrawer:0.7.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
+|    +--- io.palaima.debugdrawer:debugdrawer-view:0.7.0
+|    |    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+|    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-view:0.7.0 (*)
+\--- javax.annotation:jsr250-api:1.0
+
+_debugUnitTestApk - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_debugUnitTestCompile - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_releaseApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.fernandocejas.frodo:frodo-api:0.8.2
++--- com.jakewharton.hugo:hugo-annotations:1.2.1
++--- com.android.support:appcompat-v7:23.3.0
+|    +--- com.android.support:support-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-v4:23.3.0
+|    |         \--- com.android.support:support-annotations:23.3.0
+|    +--- com.android.support:animated-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-vector-drawable:23.3.0 (*)
+|    \--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:design:23.3.0
+|    +--- com.android.support:appcompat-v7:23.3.0 (*)
+|    +--- com.android.support:support-v4:23.3.0 (*)
+|    \--- com.android.support:recyclerview-v7:23.3.0
+|         +--- com.android.support:support-v4:23.3.0 (*)
+|         \--- com.android.support:support-annotations:23.3.0
++--- com.android.support:support-annotations:23.3.0
++--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.android.support:recyclerview-v7:23.2.1 -> 23.3.0 (*)
++--- com.jakewharton:butterknife:7.0.1
++--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-api:0.14.0
++--- com.github.frankiesardo:icepick:2.3.6
++--- io.nlopez.smartadapters:library:1.3.1
+|    \--- com.android.support:recyclerview-v7:23.1.0 -> 23.3.0 (*)
++--- com.github.jkwiecien:Switcher:1.1.3
++--- com.squareup.okhttp3:okhttp:3.2.0
+|    \--- com.squareup.okio:okio:1.6.0
++--- com.squareup.okhttp3:okhttp-urlconnection:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.squareup.retrofit2:retrofit:2.0.2
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.github.aurae.retrofit2:converter-logansquare:1.4.0
+|    +--- com.bluelinelabs:logansquare:1.3.7
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.5.1
+|    \--- com.squareup.retrofit2:retrofit:2.0.0 -> 2.0.2 (*)
++--- com.squareup.okhttp3:logging-interceptor:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.bluelinelabs:logansquare:1.3.7 (*)
++--- com.google.dagger:dagger:2.4
+|    \--- javax.inject:javax.inject:1
++--- io.requery:requery:1.0.0-beta16
++--- io.requery:requery-android:1.0.0-beta16
++--- com.github.orhanobut:logger:1.12
++--- io.reactivex:rxandroid:1.1.0
+|    \--- io.reactivex:rxjava:1.1.0 -> 1.1.3
++--- io.reactivex:rxjava:1.1.3
++--- com.birbit:android-priority-jobqueue:1.3.5
++--- org.greenrobot:eventbus:3.0.0
++--- com.novoda:merlin:0.7.0
+|    \--- com.android.support:support-v4:23.0.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:mvp:2.0.1
+|    +--- com.hannesdorfmann.mosby:mvp-common:2.0.1
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate:2.0.1
+|    \--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
++--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
+|    +--- com.bluelinelabs:conductor:1.1.4
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0 (*)
+|    \--- com.hannesdorfmann.mosby:viewstate:2.0.1 (*)
++--- com.bluelinelabs:conductor:1.1.4 (*)
++--- com.github.polok.localify:localify:1.0.0
+|    \--- com.android.support:appcompat-v7:22.1.1 -> 23.3.0 (*)
++--- com.squareup.picasso:picasso:2.5.2
++--- io.palaima.debugdrawer:debugdrawer-commons:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-picasso:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-fps:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- com.jakewharton.scalpel:scalpel:1.1.2
++--- jp.wasabeef:takt:1.0.2
++--- io.palaima.debugdrawer:debugdrawer-no-op:0.7.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+\--- io.palaima.debugdrawer:debugdrawer-view-no-op:0.7.0
+     \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+
+_releaseCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.fernandocejas.frodo:frodo-api:0.8.2
++--- com.jakewharton.hugo:hugo-annotations:1.2.1
++--- com.android.support:appcompat-v7:23.3.0
+|    +--- com.android.support:support-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-v4:23.3.0
+|    |         \--- com.android.support:support-annotations:23.3.0
+|    +--- com.android.support:animated-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-vector-drawable:23.3.0 (*)
+|    \--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:design:23.3.0
+|    +--- com.android.support:appcompat-v7:23.3.0 (*)
+|    +--- com.android.support:support-v4:23.3.0 (*)
+|    \--- com.android.support:recyclerview-v7:23.3.0
+|         +--- com.android.support:support-v4:23.3.0 (*)
+|         \--- com.android.support:support-annotations:23.3.0
++--- com.android.support:support-annotations:23.3.0
++--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.android.support:recyclerview-v7:23.2.1 -> 23.3.0 (*)
++--- com.jakewharton:butterknife:7.0.1
++--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-api:0.14.0
++--- com.github.frankiesardo:icepick:2.3.6
++--- io.nlopez.smartadapters:library:1.3.1
+|    \--- com.android.support:recyclerview-v7:23.1.0 -> 23.3.0 (*)
++--- com.github.jkwiecien:Switcher:1.1.3
++--- com.squareup.okhttp3:okhttp:3.2.0
+|    \--- com.squareup.okio:okio:1.6.0
++--- com.squareup.okhttp3:okhttp-urlconnection:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.squareup.retrofit2:retrofit:2.0.2
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.github.aurae.retrofit2:converter-logansquare:1.4.0
+|    +--- com.bluelinelabs:logansquare:1.3.7
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.5.1
+|    \--- com.squareup.retrofit2:retrofit:2.0.0 -> 2.0.2 (*)
++--- com.squareup.okhttp3:logging-interceptor:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.bluelinelabs:logansquare:1.3.7 (*)
++--- com.google.dagger:dagger:2.4
+|    \--- javax.inject:javax.inject:1
++--- io.requery:requery:1.0.0-beta16
++--- io.requery:requery-android:1.0.0-beta16
++--- com.github.orhanobut:logger:1.12
++--- io.reactivex:rxandroid:1.1.0
+|    \--- io.reactivex:rxjava:1.1.0 -> 1.1.3
++--- io.reactivex:rxjava:1.1.3
++--- com.birbit:android-priority-jobqueue:1.3.5
++--- org.greenrobot:eventbus:3.0.0
++--- com.novoda:merlin:0.7.0
+|    \--- com.android.support:support-v4:23.0.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:mvp:2.0.1
+|    +--- com.hannesdorfmann.mosby:mvp-common:2.0.1
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate:2.0.1
+|    \--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
++--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
+|    +--- com.bluelinelabs:conductor:1.1.4
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0 (*)
+|    \--- com.hannesdorfmann.mosby:viewstate:2.0.1 (*)
++--- com.bluelinelabs:conductor:1.1.4 (*)
++--- com.github.polok.localify:localify:1.0.0
+|    \--- com.android.support:appcompat-v7:22.1.1 -> 23.3.0 (*)
++--- com.squareup.picasso:picasso:2.5.2
++--- io.palaima.debugdrawer:debugdrawer-commons:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-picasso:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-fps:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- com.jakewharton.scalpel:scalpel:1.1.2
++--- jp.wasabeef:takt:1.0.2
++--- javax.annotation:jsr250-api:1.0
++--- io.palaima.debugdrawer:debugdrawer-no-op:0.7.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+\--- io.palaima.debugdrawer:debugdrawer-view-no-op:0.7.0
+     \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+
+_releaseUnitTestApk - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_releaseUnitTestCompile - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+androidJacocoAgent - The Jacoco agent to use to get coverage data.
+\--- org.jacoco:org.jacoco.agent:0.7.4.201502262128
+
+androidJacocoAnt - The Jacoco ant tasks to use to get execute Gradle tasks.
+\--- org.jacoco:org.jacoco.ant:0.7.4.201502262128
+     +--- org.jacoco:org.jacoco.core:0.7.4.201502262128
+     |    \--- org.ow2.asm:asm-debug-all:5.0.1
+     +--- org.jacoco:org.jacoco.report:0.7.4.201502262128
+     |    +--- org.jacoco:org.jacoco.core:0.7.4.201502262128 (*)
+     |    \--- org.ow2.asm:asm-debug-all:5.0.1
+     \--- org.jacoco:org.jacoco.agent:0.7.4.201502262128
+
+androidTestApk - Classpath packaged with the compiled 'androidTest' classes.
+No dependencies
+
+androidTestApt
++--- com.android.support:multidex-instrumentation:1.0.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    \--- com.android.support:support-annotations:23.0.1
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
++--- com.jayway.android.robotium:robotium-solo:5.5.4
++--- com.squareup.okhttp3:mockwebserver:3.2.0
+|    +--- com.squareup.okhttp3:okhttp:3.2.0
+|    |    \--- com.squareup.okio:okio:1.6.0
+|    +--- com.squareup.okhttp3:okhttp-ws:3.2.0
+|    |    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.50
+|    \--- junit:junit:4.11 -> 4.12 (*)
++--- com.google.truth:truth:0.28
+|    +--- com.google.guava:guava:18.0
+|    \--- junit:junit:4.10 -> 4.12 (*)
++--- com.github.ignaciotcrespo:frutilla:0.7.1
+|    \--- junit:junit:4.12 (*)
++--- org.mockito:mockito-core:1.10.19
+|    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    \--- org.objenesis:objenesis:2.1
++--- com.google.dexmaker:dexmaker-mockito:1.2
+|    +--- com.google.dexmaker:dexmaker:1.2
+|    \--- org.mockito:mockito-core:1.9.5 -> 1.10.19 (*)
+\--- com.squareup.okhttp3:okhttp-testing-support:3.2.0
+     \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+
+androidTestCompile - Classpath for compiling the androidTest sources.
++--- com.android.support:multidex-instrumentation:1.0.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    \--- com.android.support:support-annotations:23.0.1
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
++--- com.jayway.android.robotium:robotium-solo:5.5.4
++--- com.squareup.okhttp3:mockwebserver:3.2.0
+|    +--- com.squareup.okhttp3:okhttp:3.2.0
+|    |    \--- com.squareup.okio:okio:1.6.0
+|    +--- com.squareup.okhttp3:okhttp-ws:3.2.0
+|    |    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.50
+|    \--- junit:junit:4.11 -> 4.12 (*)
++--- com.google.truth:truth:0.28
+|    +--- com.google.guava:guava:18.0
+|    \--- junit:junit:4.10 -> 4.12 (*)
++--- com.github.ignaciotcrespo:frutilla:0.7.1
+|    \--- junit:junit:4.12 (*)
++--- org.mockito:mockito-core:1.10.19
+|    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    \--- org.objenesis:objenesis:2.1
++--- com.google.dexmaker:dexmaker-mockito:1.2
+|    +--- com.google.dexmaker:dexmaker:1.2
+|    \--- org.mockito:mockito-core:1.9.5 -> 1.10.19 (*)
+\--- com.squareup.okhttp3:okhttp-testing-support:3.2.0
+     \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
+
+androidTestProvided - Classpath for only compiling the androidTest sources.
+No dependencies
+
+androidTestWearApp - Link to a wear app to embed for object 'androidTest'.
+No dependencies
+
+apk - Classpath packaged with the compiled 'main' classes.
+No dependencies
+
+apt
++--- com.github.lukaspili.autodagger2:autodagger2-compiler:1.1
+|    +--- com.github.lukaspili.processor-workflow:processor-workflow:1.0.1
+|    |    +--- com.squareup:javapoet:1.1.0 -> 1.6.1
+|    |    +--- com.google.guava:guava:18.0 -> 19.0
+|    |    +--- com.google.auto:auto-common:0.4
+|    |    |    \--- com.google.guava:guava:18.0 -> 19.0
+|    |    +--- com.google.auto.service:auto-service:1.0-rc2
+|    |    |    +--- com.google.auto:auto-common:0.3 -> 0.4 (*)
+|    |    |    \--- com.google.guava:guava:18.0 -> 19.0
+|    |    \--- org.apache.commons:commons-lang3:3.4
+|    +--- com.github.lukaspili.autodagger2:autodagger2:1.1
+|    \--- com.github.lukaspili.autodagger2:autodagger2-compiler-utils:1.1
+|         +--- com.squareup:javapoet:1.1.0 -> 1.6.1
+|         +--- com.google.guava:guava:18.0 -> 19.0
+|         +--- com.google.auto:auto-common:0.4 (*)
+|         +--- com.github.lukaspili.processor-workflow:processor-workflow:1.0.1 (*)
+|         +--- org.apache.commons:commons-lang3:3.4
+|         \--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.hannesdorfmann.fragmentargs:processor:3.0.2
+|    \--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-compiler:0.14.0
+|    +--- se.emilsjolander:intentbuilder-api:0.14.0
+|    +--- com.squareup:javapoet:1.0.0 -> 1.6.1
+|    \--- com.google.android:android:4.1.1.4
+|         +--- commons-logging:commons-logging:1.1.1
+|         +--- org.apache.httpcomponents:httpclient:4.0.1
+|         |    +--- org.apache.httpcomponents:httpcore:4.0.1
+|         |    +--- commons-logging:commons-logging:1.1.1
+|         |    \--- commons-codec:commons-codec:1.3
+|         +--- org.khronos:opengl-api:gl1.1-android-2.1_r1
+|         +--- xerces:xmlParserAPIs:2.6.2
+|         +--- xpp3:xpp3:1.1.4c
+|         \--- org.json:json:20080701
++--- com.github.frankiesardo:icepick-processor:2.3.6
+|    +--- com.github.frankiesardo:icepick:2.3.6
+|    \--- com.google.guava:guava:15.0 -> 19.0
++--- com.bluelinelabs:logansquare-compiler:1.3.7
+|    +--- org.apache.commons:commons-lang3:3.2 -> 3.4
+|    +--- com.squareup:javapoet:1.2.0 -> 1.6.1
+|    \--- com.bluelinelabs:logansquare:1.3.7
+|         \--- com.fasterxml.jackson.core:jackson-core:2.5.1
++--- com.google.dagger:dagger-compiler:2.4
+|    +--- com.google.dagger:dagger:2.4
+|    |    \--- javax.inject:javax.inject:1
+|    +--- com.google.dagger:dagger-producers:2.4
+|    |    +--- com.google.dagger:dagger:2.4 (*)
+|    |    \--- com.google.guava:guava:19.0
+|    \--- com.google.guava:guava:19.0
++--- io.requery:requery-processor:1.0.0-beta16
+|    +--- org.eclipse.persistence:javax.persistence:2.1.1
+|    +--- io.requery:requery:1.0.0-beta16
+|    \--- com.squareup:javapoet:1.6.1
++--- com.fernandocejas.frodo:frodo-api:0.8.2
++--- com.jakewharton.hugo:hugo-annotations:1.2.1
++--- com.android.support:appcompat-v7:23.3.0
+|    +--- com.android.support:support-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-v4:23.3.0
+|    |         \--- com.android.support:support-annotations:23.3.0
+|    +--- com.android.support:animated-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-vector-drawable:23.3.0 (*)
+|    \--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:design:23.3.0
+|    +--- com.android.support:appcompat-v7:23.3.0 (*)
+|    +--- com.android.support:support-v4:23.3.0 (*)
+|    \--- com.android.support:recyclerview-v7:23.3.0
+|         +--- com.android.support:support-v4:23.3.0 (*)
+|         \--- com.android.support:support-annotations:23.3.0
++--- com.android.support:support-annotations:23.3.0
++--- com.android.support:multidex:1.0.1
++--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.android.support:recyclerview-v7:23.2.1 -> 23.3.0 (*)
++--- com.jakewharton:butterknife:7.0.1
++--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-api:0.14.0
++--- com.github.frankiesardo:icepick:2.3.6
++--- io.nlopez.smartadapters:library:1.3.1
+|    \--- com.android.support:recyclerview-v7:23.1.0 -> 23.3.0 (*)
++--- com.github.jkwiecien:Switcher:1.1.3
++--- com.squareup.okhttp3:okhttp:3.2.0
+|    \--- com.squareup.okio:okio:1.6.0
++--- com.squareup.okhttp3:okhttp-urlconnection:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.squareup.retrofit2:retrofit:2.0.2
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.github.aurae.retrofit2:converter-logansquare:1.4.0
+|    +--- com.bluelinelabs:logansquare:1.3.7 (*)
+|    \--- com.squareup.retrofit2:retrofit:2.0.0 -> 2.0.2 (*)
++--- com.squareup.okhttp3:logging-interceptor:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.bluelinelabs:logansquare:1.3.7 (*)
++--- com.google.dagger:dagger:2.4 (*)
++--- io.requery:requery:1.0.0-beta16
++--- io.requery:requery-android:1.0.0-beta16
++--- com.github.orhanobut:logger:1.12
++--- io.reactivex:rxandroid:1.1.0
+|    \--- io.reactivex:rxjava:1.1.0 -> 1.1.3
++--- io.reactivex:rxjava:1.1.3
++--- com.birbit:android-priority-jobqueue:1.3.5
++--- org.greenrobot:eventbus:3.0.0
++--- com.novoda:merlin:0.7.0
+|    \--- com.android.support:support-v4:23.0.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:mvp:2.0.1
+|    +--- com.hannesdorfmann.mosby:mvp-common:2.0.1
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate:2.0.1
+|    \--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
++--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
+|    +--- com.bluelinelabs:conductor:1.1.4
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0 (*)
+|    \--- com.hannesdorfmann.mosby:viewstate:2.0.1 (*)
++--- com.bluelinelabs:conductor:1.1.4 (*)
++--- com.github.polok.localify:localify:1.0.0
+|    \--- com.android.support:appcompat-v7:22.1.1 -> 23.3.0 (*)
++--- com.squareup.picasso:picasso:2.5.2
++--- io.palaima.debugdrawer:debugdrawer-commons:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-picasso:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-fps:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- com.jakewharton.scalpel:scalpel:1.1.2
++--- jp.wasabeef:takt:1.0.2
+\--- javax.annotation:jsr250-api:1.0
+
+archives - Configuration for archive artifacts.
+No dependencies
+
+compile - Classpath for compiling the main sources.
++--- com.fernandocejas.frodo:frodo-api:0.8.2
++--- com.jakewharton.hugo:hugo-annotations:1.2.1
++--- com.android.support:appcompat-v7:23.3.0
+|    +--- com.android.support:support-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-v4:23.3.0
+|    |         \--- com.android.support:support-annotations:23.3.0
+|    +--- com.android.support:animated-vector-drawable:23.3.0
+|    |    \--- com.android.support:support-vector-drawable:23.3.0 (*)
+|    \--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:support-v4:23.3.0 (*)
++--- com.android.support:design:23.3.0
+|    +--- com.android.support:appcompat-v7:23.3.0 (*)
+|    +--- com.android.support:support-v4:23.3.0 (*)
+|    \--- com.android.support:recyclerview-v7:23.3.0
+|         +--- com.android.support:support-v4:23.3.0 (*)
+|         \--- com.android.support:support-annotations:23.3.0
++--- com.android.support:support-annotations:23.3.0
++--- com.android.support:multidex:1.0.1
++--- com.github.lukaspili.autodagger2:autodagger2:1.1
++--- com.android.support:recyclerview-v7:23.2.1 -> 23.3.0 (*)
++--- com.jakewharton:butterknife:7.0.1
++--- com.hannesdorfmann.fragmentargs:annotation:3.0.2
++--- se.emilsjolander:intentbuilder-api:0.14.0
++--- com.github.frankiesardo:icepick:2.3.6
++--- io.nlopez.smartadapters:library:1.3.1
+|    \--- com.android.support:recyclerview-v7:23.1.0 -> 23.3.0 (*)
++--- com.github.jkwiecien:Switcher:1.1.3
++--- com.squareup.okhttp3:okhttp:3.2.0
+|    \--- com.squareup.okio:okio:1.6.0
++--- com.squareup.okhttp3:okhttp-urlconnection:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.squareup.retrofit2:retrofit:2.0.2
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.github.aurae.retrofit2:converter-logansquare:1.4.0
+|    +--- com.bluelinelabs:logansquare:1.3.7
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.5.1
+|    \--- com.squareup.retrofit2:retrofit:2.0.0 -> 2.0.2 (*)
++--- com.squareup.okhttp3:logging-interceptor:3.2.0
+|    \--- com.squareup.okhttp3:okhttp:3.2.0 (*)
++--- com.bluelinelabs:logansquare:1.3.7 (*)
++--- com.google.dagger:dagger:2.4
+|    \--- javax.inject:javax.inject:1
++--- io.requery:requery:1.0.0-beta16
++--- io.requery:requery-android:1.0.0-beta16
++--- com.github.orhanobut:logger:1.12
++--- io.reactivex:rxandroid:1.1.0
+|    \--- io.reactivex:rxjava:1.1.0 -> 1.1.3
++--- io.reactivex:rxjava:1.1.3
++--- com.birbit:android-priority-jobqueue:1.3.5
++--- org.greenrobot:eventbus:3.0.0
++--- com.novoda:merlin:0.7.0
+|    \--- com.android.support:support-v4:23.0.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:mvp:2.0.1
+|    +--- com.hannesdorfmann.mosby:mvp-common:2.0.1
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate:2.0.1
+|    \--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
++--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp:2.0.1 (*)
+|    +--- com.bluelinelabs:conductor:1.1.4
+|    |    \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
+|    \--- com.android.support:appcompat-v7:23.3.0 (*)
++--- com.hannesdorfmann.mosby:viewstate-conductor:0.7.0
+|    +--- com.hannesdorfmann.mosby:mvp-conductor:0.7.0 (*)
+|    \--- com.hannesdorfmann.mosby:viewstate:2.0.1 (*)
++--- com.bluelinelabs:conductor:1.1.4 (*)
++--- com.github.polok.localify:localify:1.0.0
+|    \--- com.android.support:appcompat-v7:22.1.1 -> 23.3.0 (*)
++--- com.squareup.picasso:picasso:2.5.2
++--- io.palaima.debugdrawer:debugdrawer-commons:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1 -> 23.3.0
++--- io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-picasso:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- io.palaima.debugdrawer:debugdrawer-fps:0.7.0
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
++--- com.jakewharton.scalpel:scalpel:1.1.2
+\--- jp.wasabeef:takt:1.0.2
+
+debugApk - Classpath packaged with the compiled 'debug' classes.
+No dependencies
+
+debugCompile - Classpath for compiling the debug sources.
++--- org.aspectj:aspectjrt:1.8.6
++--- com.fernandocejas.frodo:frodo-runtime:0.8.2
++--- com.jakewharton.hugo:hugo-runtime:1.2.1
+|    +--- com.jakewharton.hugo:hugo-annotations:1.2.1
+|    \--- org.aspectj:aspectjrt:1.8.5 -> 1.8.6
++--- org.aspectj:aspectjrt:1.8.5 -> 1.8.6
++--- io.palaima.debugdrawer:debugdrawer:0.7.0
+|    +--- com.android.support:appcompat-v7:23.1.1
+|    |    \--- com.android.support:support-v4:23.1.1
+|    |         \--- com.android.support:support-annotations:23.1.1
+|    +--- io.palaima.debugdrawer:debugdrawer-view:0.7.0
+|    |    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|    |         \--- com.android.support:support-annotations:23.1.1
+|    \--- com.android.support:support-annotations:23.1.1
+\--- io.palaima.debugdrawer:debugdrawer-view:0.7.0 (*)
+
+debugProvided - Classpath for only compiling the debug sources.
+No dependencies
+
+debugWearApp - Link to a wear app to embed for object 'debug'.
+No dependencies
+
+default - Configuration for default artifacts.
+No dependencies
+
+default-mapping - Configuration for default mapping artifacts.
+No dependencies
+
+default-metadata - Metadata for the produced APKs.
+No dependencies
+
+provided - Classpath for only compiling the main sources.
+\--- javax.annotation:jsr250-api:1.0
+
+releaseApk - Classpath packaged with the compiled 'release' classes.
+No dependencies
+
+releaseCompile - Classpath for compiling the release sources.
++--- io.palaima.debugdrawer:debugdrawer-no-op:0.7.0
+|    +--- com.android.support:appcompat-v7:23.1.1
+|    |    \--- com.android.support:support-v4:23.1.1
+|    |         \--- com.android.support:support-annotations:23.1.1
+|    \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0
+|         \--- com.android.support:support-annotations:23.1.1
+\--- io.palaima.debugdrawer:debugdrawer-view-no-op:0.7.0
+     \--- io.palaima.debugdrawer:debugdrawer-base:0.7.0 (*)
+
+releaseProvided - Classpath for only compiling the release sources.
+No dependencies
+
+releaseWearApp - Link to a wear app to embed for object 'release'.
+No dependencies
+
+retrolambdaConfig
+\--- net.orfjackal.retrolambda:retrolambda:2.1.0
+
+testApk - Classpath packaged with the compiled 'test' classes.
+No dependencies
+
+testApt
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+testCompile - Classpath for compiling the test sources.
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+testDebugApk - Classpath packaged with the compiled 'testDebug' classes.
+No dependencies
+
+testDebugCompile - Classpath for compiling the testDebug sources.
+No dependencies
+
+testDebugProvided - Classpath for only compiling the testDebug sources.
+No dependencies
+
+testDebugWearApp - Link to a wear app to embed for object 'testDebug'.
+No dependencies
+
+testProvided - Classpath for only compiling the test sources.
+No dependencies
+
+testReleaseApk - Classpath packaged with the compiled 'testRelease' classes.
+No dependencies
+
+testReleaseCompile - Classpath for compiling the testRelease sources.
+No dependencies
+
+testReleaseProvided - Classpath for only compiling the testRelease sources.
+No dependencies
+
+testReleaseWearApp - Link to a wear app to embed for object 'testRelease'.
+No dependencies
+
+testWearApp - Link to a wear app to embed for object 'test'.
+No dependencies
+
+wearApp - Link to a wear app to embed for object 'main'.
+No dependencies
+
+BUILD SUCCESSFUL
+
+Total time: 2.06 secs

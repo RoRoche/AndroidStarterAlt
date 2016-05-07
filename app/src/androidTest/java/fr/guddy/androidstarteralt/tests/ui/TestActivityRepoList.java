@@ -13,8 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import fr.guddy.androidstarteralt.mvp.repoDetail.ActivityRepoDetail;
-import fr.guddy.androidstarteralt.mvp.repoList.ActivityRepoList;
+import fr.guddy.androidstarteralt.mvp.ActivityMain;
 import fr.guddy.androidstarteralt.tests.mock.MockApplication;
 import fr.guddy.androidstarteralt.tests.mock.MockModuleRest;
 import okhttp3.mockwebserver.MockResponse;
@@ -24,7 +23,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 @RunWith(FrutillaTestRunner.class)
 @LargeTest
-public class TestActivityRepoList extends AbstractRobotiumTestCase<ActivityRepoList> {
+public class TestActivityRepoList extends AbstractRobotiumTestCase<ActivityMain> {
 
     //region Fields
     private LocalifyClient mLocalifyClient;
@@ -34,7 +33,7 @@ public class TestActivityRepoList extends AbstractRobotiumTestCase<ActivityRepoL
 
     //region Constructor matching super
     public TestActivityRepoList() {
-        super(new ActivityTestRule<>(ActivityRepoList.class, true, false));
+        super(new ActivityTestRule<>(ActivityMain.class, true, false));
     }
     //endregion
 
@@ -125,7 +124,7 @@ public class TestActivityRepoList extends AbstractRobotiumTestCase<ActivityRepoL
 
         Then:
         {
-            mSolo.assertCurrentActivity("should be on ActivityRepoDetail", ActivityRepoDetail.class);
+            mSolo.assertCurrentActivity("should stay on ActivityMain", ActivityMain.class);
             final boolean lbFoundTheRepo = mSolo.waitForText("This repo is for demonstration purposes only.", 1, 5000L, true);
             assertThat(lbFoundTheRepo).isTrue();
         }
@@ -160,7 +159,7 @@ public class TestActivityRepoList extends AbstractRobotiumTestCase<ActivityRepoL
 
         Then:
         {
-            mSolo.assertCurrentActivity("should be on ActivityRepoList", ActivityRepoList.class);
+            mSolo.assertCurrentActivity("should be on ActivityMain", ActivityMain.class);
             final boolean lbFoundTheRepo = mSolo.waitForText("git-consortium", 1, 5000L, true);
             assertThat(lbFoundTheRepo).isTrue();
         }

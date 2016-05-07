@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.bluelinelabs.conductor.ControllerChangeHandler;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.hannesdorfmann.mosby.conductor.viewstate.MvpViewStateController;
 
@@ -18,6 +19,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.R;
+import fr.guddy.androidstarteralt.mvp.changehandlers.CircularRevealChangeHandlerCompat;
 import fr.guddy.androidstarteralt.mvp.repoDetail.ControllerRepoDetail;
 import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
@@ -127,7 +129,11 @@ public class ControllerRepoList
     public void onViewEvent(final int piActionID, final Repo poRepo, final int piPosition, final View poView) {
         if (piActionID == CellRepo.ROW_PRESSED) {
             final ControllerRepoDetail loVC = new ControllerRepoDetail(poRepo.getBaseId());
-            final RouterTransaction loTransaction = RouterTransaction.builder(loVC).build();
+            final ControllerChangeHandler loChangeHandler = new CircularRevealChangeHandlerCompat(poView, mRecyclerView);
+            final RouterTransaction loTransaction = RouterTransaction.builder(loVC)
+                    .pushChangeHandler(loChangeHandler)
+                    .popChangeHandler(loChangeHandler)
+                    .build();
             getRouter().pushController(loTransaction);
         }
     }

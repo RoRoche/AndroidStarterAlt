@@ -10,20 +10,17 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 
 import autodagger.AutoInjector;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
-import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import fr.guddy.androidstarteralt.rest.queries.QueryFactory;
 import fr.guddy.androidstarteralt.rest.queries.QueryGetRepos;
 import hugo.weaving.DebugLog;
 import io.requery.Persistable;
 import io.requery.rx.SingleEntityStore;
-import rx.Observable;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -107,7 +104,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
                         () -> {
                             if (isViewAttached()) {
                                 loView.setData(new ModelRepoList(lloRepos));
-                                if (lloRepos == null || lloRepos.isEmpty()) {
+                                if (lloRepos.isEmpty()) {
                                     loView.showEmpty();
                                 } else {
                                     loView.showContent();

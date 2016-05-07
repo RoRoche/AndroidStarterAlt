@@ -1,8 +1,6 @@
 package fr.guddy.androidstarteralt.mvp.repoDetail;
 
-import android.app.Activity;
 import android.support.annotation.NonNull;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

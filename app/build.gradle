@@ -140,7 +140,7 @@ dependencies {
 
     compile 'org.greenrobot:eventbus:3.0.0'
 
-    compile ('com.novoda:merlin:0.7.0') {
+    compile('com.novoda:merlin:0.7.0') {
         exclude group: 'io.reactivex', module: 'rxandroid'
     }
 
@@ -150,7 +150,7 @@ dependencies {
     compile 'com.hannesdorfmann.mosby:viewstate-conductor:0.7.0'
     compile 'com.bluelinelabs:conductor:1.1.4'
 
-    compile ('com.github.polok.localify:localify:1.0.0') {
+    compile('com.github.polok.localify:localify:1.0.0') {
         exclude group: 'io.reactivex', module: 'rxjava'
     }
 
@@ -173,7 +173,7 @@ dependencies {
     androidTestCompile('com.android.support:multidex-instrumentation:1.0.1') {
         exclude group: 'com.android.support', module: 'multidex'
     }
-    androidTestCompile ('com.android.support.test:runner:0.4.1') {
+    androidTestCompile('com.android.support.test:runner:0.4.1') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
     androidTestCompile 'com.android.support:support-annotations:23.3.0'

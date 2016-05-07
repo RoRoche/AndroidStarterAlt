@@ -1,7 +1,5 @@
 package fr.guddy.androidstarteralt.rest.queries;
 
-import com.orhanobut.logger.Logger;
-
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
@@ -11,7 +9,6 @@ import javax.inject.Inject;
 
 import autodagger.AutoInjector;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
-import fr.guddy.androidstarteralt.BuildConfig;
 import fr.guddy.androidstarteralt.bus.event.AbstractEventQueryDidFinish;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import fr.guddy.androidstarteralt.rest.GitHubService;
@@ -23,8 +20,6 @@ import retrofit2.Response;
 
 @AutoInjector(ApplicationAndroidStarter.class)
 public class QueryGetRepos extends AbstractQuery {
-    private static final String TAG = QueryGetRepos.class.getSimpleName();
-    private static final boolean DEBUG = true;
 
     //region Injected fields
     @Inject
@@ -64,10 +59,6 @@ public class QueryGetRepos extends AbstractQuery {
         results = loExecute.body();
 
         final int liDeleted = dataStore.delete(RepoEntity.class).get().value();
-
-        if (BuildConfig.DEBUG && DEBUG) {
-            Logger.t(TAG).d("deleted row count = %d", liDeleted);
-        }
 
         final ArrayList<RepoEntity> lloEntities = new ArrayList<>();
         for (final DTORepo loDTORepo : results) {

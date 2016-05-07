@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">AndroidStarterAlt</string>
-    <string name="title_repo_detail">Repo Detail</string>
     <string name="empty_repo">Aucun repo disponible</string>
     <string name="error_repo">Erreur pendant la récupération des repos</string>
 </resources>

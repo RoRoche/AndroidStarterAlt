@@ -16,7 +16,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
 import fr.guddy.androidstarteralt.R;
-import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
 import io.nlopez.smartadapters.views.BindableFrameLayout;
 
@@ -64,7 +63,7 @@ public class CellRepo extends BindableFrameLayout<RepoEntity> {
         }
 
         setOnClickListener((final View poView) ->
-                        notifyItemAction(ROW_PRESSED)
+                notifyItemAction(ROW_PRESSED)
         );
     }
 

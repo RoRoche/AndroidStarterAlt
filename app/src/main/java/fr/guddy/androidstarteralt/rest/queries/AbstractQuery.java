@@ -1,16 +1,12 @@
 package fr.guddy.androidstarteralt.rest.queries;
 
-import com.orhanobut.logger.Logger;
 import com.path.android.jobqueue.Job;
 import com.path.android.jobqueue.Params;
 
-import fr.guddy.androidstarteralt.BuildConfig;
 import fr.guddy.androidstarteralt.bus.event.AbstractEventQueryDidFinish;
 import hugo.weaving.DebugLog;
 
 public abstract class AbstractQuery extends Job {
-    private static final String TAG = AbstractQuery.class.getSimpleName();
-    private static final boolean DEBUG = true;
 
     protected enum Priority {
         LOW(0),
@@ -41,25 +37,16 @@ public abstract class AbstractQuery extends Job {
     @DebugLog
     @Override
     public void onAdded() {
-        if (BuildConfig.DEBUG && DEBUG) {
-            Logger.t(TAG).d("");
-        }
     }
 
     @DebugLog
     @Override
     public void onRun() throws Throwable {
-        if (BuildConfig.DEBUG && DEBUG) {
-            Logger.t(TAG).d("");
-        }
 
         try {
             execute();
             mSuccess = true;
         } catch (Throwable loThrowable) {
-            if (BuildConfig.DEBUG && DEBUG) {
-                Logger.t(TAG).e(loThrowable, "");
-            }
             mErrorType = AbstractEventQueryDidFinish.ErrorType.UNKNOWN;
             mThrowable = loThrowable;
             mSuccess = false;

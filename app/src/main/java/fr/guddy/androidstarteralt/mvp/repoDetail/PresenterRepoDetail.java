@@ -15,7 +15,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 @AutoInjector(ApplicationAndroidStarter.class)
-public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> {
+public final class PresenterRepoDetail extends MvpBasePresenter<RepoDetailMvp.View> implements RepoDetailMvp.Presenter {
 
     //region Injected fields
     @Inject
@@ -44,8 +44,9 @@ public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> 
     //endregion
 
     //region Visible API
+    @Override
     public void loadRepo(final long plRepoId, final boolean pbPullToRefresh) {
-        final ViewRepoDetail loView = getView();
+        final RepoDetailMvp.View loView = getView();
         if (isViewAttached() && loView != null) {
             loView.showLoading(pbPullToRefresh);
         }
@@ -57,7 +58,7 @@ public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> 
     private void getRepo(final long plRepoId) {
         unsubscribe();
 
-        final ViewRepoDetail loView = getView();
+        final RepoDetailMvp.View loView = getView();
         if (loView == null) {
             return;
         }
@@ -72,7 +73,7 @@ public final class PresenterRepoDetail extends MvpBasePresenter<ViewRepoDetail> 
                         // onNext
                         (final Repo poRepo) -> {
                             if (isViewAttached()) {
-                                loView.setData(new ModelRepoDetail(poRepo));
+                                loView.setData(new RepoDetailMvp.Model(poRepo));
                                 if (poRepo == null) {
                                     loView.showEmpty();
                                 } else {

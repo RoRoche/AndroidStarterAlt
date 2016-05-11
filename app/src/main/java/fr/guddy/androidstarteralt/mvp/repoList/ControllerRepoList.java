@@ -30,8 +30,8 @@ import io.nlopez.smartadapters.utils.ViewEventListener;
 import pl.aprilapps.switcher.Switcher;
 
 public class ControllerRepoList
-        extends MvpViewStateController<ViewRepoList, PresenterRepoList, ViewStateRepoList>
-        implements ViewRepoList, ViewEventListener<Repo>, SwipeRefreshLayout.OnRefreshListener {
+        extends MvpViewStateController<RepoListMvp.View, RepoListMvp.Presenter, RepoListMvp.ViewState>
+        implements RepoListMvp.View, ViewEventListener<Repo>, SwipeRefreshLayout.OnRefreshListener {
 
     //region Injected views
     @Bind(R.id.ControllerRepoList_ProgressBar_Loading)
@@ -68,7 +68,6 @@ public class ControllerRepoList
     //endregion
 
     //region Constructor
-
     public ControllerRepoList() {
     }
     //endregion
@@ -143,15 +142,15 @@ public class ControllerRepoList
     @DebugLog
     @NonNull
     @Override
-    public PresenterRepoList createPresenter() {
+    public RepoListMvp.Presenter createPresenter() {
         return new PresenterRepoList();
     }
 
     @DebugLog
     @NonNull
     @Override
-    public ViewStateRepoList createViewState() {
-        return new ViewStateRepoList();
+    public RepoListMvp.ViewState createViewState() {
+        return new RepoListMvp.ViewState();
     }
 
     @Override
@@ -199,7 +198,7 @@ public class ControllerRepoList
 
     @DebugLog
     @Override
-    public void setData(final ModelRepoList poData) {
+    public void setData(final RepoListMvp.Model poData) {
         viewState.data = poData;
 
         SmartAdapter.items(poData.repos)

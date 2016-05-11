@@ -26,7 +26,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 @AutoInjector(ApplicationAndroidStarter.class)
-public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
+public class PresenterRepoList extends MvpBasePresenter<RepoListMvp.View> implements RepoListMvp.Presenter {
 
     //region Injected fields
     @Inject
@@ -51,7 +51,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
 
     //region Overridden methods
     @Override
-    public void attachView(final ViewRepoList poView) {
+    public void attachView(final RepoListMvp.View poView) {
         super.attachView(poView);
 
         eventBus.register(this);
@@ -69,7 +69,8 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
     }
     //endregion
 
-    //region Visible API
+    //region RepoListMvp.Presenter
+    @Override
     public void loadRepos(final boolean pbPullToRefresh) {
         startQueryGetRepos(pbPullToRefresh);
     }
@@ -79,7 +80,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
     private void getRepos(final boolean pbPullToRefresh) {
         unsubscribe();
 
-        final ViewRepoList loView = getView();
+        final RepoListMvp.View loView = getView();
         if (loView == null) {
             return;
         }
@@ -103,7 +104,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
                         // onCompleted
                         () -> {
                             if (isViewAttached()) {
-                                loView.setData(new ModelRepoList(lloRepos));
+                                loView.setData(new RepoListMvp.Model(lloRepos));
                                 if (lloRepos.isEmpty()) {
                                     loView.showEmpty();
                                 } else {
@@ -118,7 +119,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
 
     //region Network job
     private void startQueryGetRepos(final boolean pbPullToRefresh) {
-        final ViewRepoList loView = getView();
+        final RepoListMvp.View loView = getView();
         if (isViewAttached() && loView != null) {
             loView.showLoading(pbPullToRefresh);
         }
@@ -134,7 +135,7 @@ public class PresenterRepoList extends MvpBasePresenter<ViewRepoList> {
         if (poEvent.success) {
             getRepos(poEvent.pullToRefresh);
         } else {
-            final ViewRepoList loView = getView();
+            final RepoListMvp.View loView = getView();
             if (isViewAttached() && loView != null) {
                 loView.showError(poEvent.throwable, poEvent.pullToRefresh);
             }

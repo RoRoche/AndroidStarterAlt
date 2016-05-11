@@ -18,8 +18,8 @@ import hugo.weaving.DebugLog;
 import pl.aprilapps.switcher.Switcher;
 
 public class ControllerRepoDetail
-        extends MvpViewStateController<ViewRepoDetail, PresenterRepoDetail, ViewStateRepoDetail>
-        implements ViewRepoDetail {
+        extends MvpViewStateController<RepoDetailMvp.View, PresenterRepoDetail, RepoDetailMvp.ViewState>
+        implements RepoDetailMvp.View {
 
     //region Fields
     private final long mItemId;
@@ -100,7 +100,7 @@ public class ControllerRepoDetail
     }
 
     @Override
-    public void setData(final ModelRepoDetail poData) {
+    public void setData(final RepoDetailMvp.Model poData) {
         configureViewWithRepo(poData.repo);
     }
 
@@ -118,8 +118,8 @@ public class ControllerRepoDetail
     @DebugLog
     @NonNull
     @Override
-    public ViewStateRepoDetail createViewState() {
-        return new ViewStateRepoDetail();
+    public RepoDetailMvp.ViewState createViewState() {
+        return new RepoDetailMvp.ViewState();
     }
 
     @Override

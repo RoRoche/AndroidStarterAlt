@@ -25,6 +25,8 @@ apply plugin: 'com.github.ben-manes.versions'
 
 apply plugin: 'me.tatarka.retrolambda'
 
+apply from: '../config/quality.gradle'
+
 repositories {
     maven {
         url "https://jitpack.io"

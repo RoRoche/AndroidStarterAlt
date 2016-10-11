@@ -1,6 +1,8 @@
 # AndroidStarterAlt
 A sample Android app using the MVP architecture.
 
+[![Build Status](https://travis-ci.org/RoRoche/AndroidStarterAlt.svg?branch=master)](https://travis-ci.org/RoRoche/AndroidStarterAlt)
+
 Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one uses:
 
 * [requery](https://github.com/requery/requery/) as persistence layer

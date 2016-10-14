@@ -2,6 +2,7 @@
 A sample Android app using the MVP architecture.
 
 [![Build Status](https://travis-ci.org/RoRoche/AndroidStarterAlt.svg?branch=master)](https://travis-ci.org/RoRoche/AndroidStarterAlt)
+[![Build Status](https://www.bitrise.io/app/30fed1131586f570.svg?token=m4Zm_PsnWHanpcQyojBX3A&branch=master)](https://www.bitrise.io/app/30fed1131586f570)
 
 Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one uses:
 

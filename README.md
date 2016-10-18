@@ -12,3 +12,7 @@ Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one 
 * [Conductor](https://github.com/bluelinelabs/Conductor) to build View-based Android application
 
 It allowed me to write less code and delete some classes written in the <https://github.com/RoRoche/AndroidStarter> repository.
+
+## TODO
+
+- [ ] move from MVP to VIPER

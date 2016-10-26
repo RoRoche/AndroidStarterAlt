@@ -5,6 +5,7 @@ A sample Android app using the MVP architecture.
 [![Build Status](https://circleci.com/gh/RoRoche/AndroidStarterAlt.svg?style=shield&circle-token=e1392aa8f9f0e28e84fcbe56e7799aa0dad35142)](https://circleci.com/gh/RoRoche/AndroidStarterAlt)
 [![Build Status](https://www.bitrise.io/app/30fed1131586f570.svg?token=m4Zm_PsnWHanpcQyojBX3A&branch=master)](https://www.bitrise.io/app/30fed1131586f570)
 [![Code coverage](https://codecov.io/github/RoRoche/AndroidStarterAlt/coverage.svg?branch=master)](https://codecov.io/gh/RoRoche/AndroidStarterAlt)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3fd4615e71704f6cbbd01b8f82e7f0fc)](https://www.codacy.com/app/romain-rochegude_2/AndroidStarterAlt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RoRoche/AndroidStarterAlt&amp;utm_campaign=Badge_Grade)
 
 Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one uses:
 

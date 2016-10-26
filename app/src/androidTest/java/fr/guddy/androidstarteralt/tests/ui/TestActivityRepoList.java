@@ -2,7 +2,6 @@ package fr.guddy.androidstarteralt.tests.ui;
 
 import android.support.annotation.NonNull;
 import android.support.test.rule.ActivityTestRule;
-import android.test.suitebuilder.annotation.LargeTest;
 
 import com.github.polok.localify.LocalifyClient;
 
@@ -21,9 +20,8 @@ import okhttp3.mockwebserver.MockWebServer;
 
 import static com.google.common.truth.Truth.assertThat;
 
-@org.junit.Ignore
+//@org.junit.Ignore
 @RunWith(FrutillaTestRunner.class)
-@LargeTest
 public class TestActivityRepoList extends AbstractRobotiumTestCase<ActivityMain> {
 
     //region Fields

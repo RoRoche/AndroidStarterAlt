@@ -34,8 +34,11 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  - android list target
   - ./gradlew build connectedCheck
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+env:
+  global:
+    - ADB_INSTALL_TIMEOUT=8

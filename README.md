@@ -1,5 +1,9 @@
 # AndroidStarterAlt
-A sample Android app using the MVP architecture.
+A sample Android app using the MVP architecture, using :
+- [Dagger2](https://google.github.io/dagger/)
+- [mosby](http://hannesdorfmann.com/mosby/)
+- [retrofit2](https://square.github.io/retrofit/)
+- [RxJava](https://github.com/ReactiveX/RxJava)
 
 [![Build Status](https://travis-ci.org/RoRoche/AndroidStarterAlt.svg?branch=master)](https://travis-ci.org/RoRoche/AndroidStarterAlt)
 [![Build Status](https://circleci.com/gh/RoRoche/AndroidStarterAlt.svg?style=shield&circle-token=e1392aa8f9f0e28e84fcbe56e7799aa0dad35142)](https://circleci.com/gh/RoRoche/AndroidStarterAlt)
@@ -9,7 +13,7 @@ A sample Android app using the MVP architecture.
 [![codebeat badge](https://codebeat.co/badges/e20f9049-330c-4eb1-99dc-e3c4c7a711f7)](https://codebeat.co/projects/github-com-roroche-androidstarteralt)
 [![Dependency Status](https://www.versioneye.com/user/projects/5818f5144304530b002f88b1/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5818f5144304530b002f88b1)
 
-Compare to the <https://github.com/RoRoche/AndroidStarter> repository, this one uses:
+Compared to the <https://github.com/RoRoche/AndroidStarter> repository, this one uses:
 
 * [requery](https://github.com/requery/requery/) as persistence layer
 * [EventBus](https://github.com/greenrobot/EventBus) as event bus layer

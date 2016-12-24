@@ -5,7 +5,7 @@ A sample Android app using the MVP architecture, using :
 - [retrofit2](https://square.github.io/retrofit/)
 - [RxJava](https://github.com/ReactiveX/RxJava)
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidStarterAlt-brightgreen.svg?style=flat)]()
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidStarterAlt-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/4933)
 
 [![Build Status](https://travis-ci.org/RoRoche/AndroidStarterAlt.svg?branch=master)](https://travis-ci.org/RoRoche/AndroidStarterAlt)
 [![Build Status](https://circleci.com/gh/RoRoche/AndroidStarterAlt.svg?style=shield&circle-token=e1392aa8f9f0e28e84fcbe56e7799aa0dad35142)](https://circleci.com/gh/RoRoche/AndroidStarterAlt)

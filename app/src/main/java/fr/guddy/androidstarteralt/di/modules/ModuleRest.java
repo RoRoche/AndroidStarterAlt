@@ -15,7 +15,6 @@ import dagger.Provides;
 import fr.guddy.androidstarteralt.IEnvironment;
 import fr.guddy.androidstarteralt.rest.GitHubService;
 import fr.guddy.androidstarteralt.rest.errorHandling.ErrorHandlingExecutorCallAdapterFactory;
-import fr.guddy.androidstarteralt.rest.queries.QueryFactory;
 import io.palaima.debugdrawer.picasso.PicassoModule;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -44,12 +43,6 @@ public class ModuleRest {
                 .addCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory.MainThreadExecutor()))
                 .build();
         return loRetrofit.create(GitHubService.class);
-    }
-
-    @Provides
-    @Singleton
-    public QueryFactory provideQueryFactory() {
-        return new QueryFactory();
     }
 
     @Provides

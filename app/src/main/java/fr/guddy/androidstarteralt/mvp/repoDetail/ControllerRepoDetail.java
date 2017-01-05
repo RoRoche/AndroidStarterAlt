@@ -10,8 +10,9 @@ import android.widget.TextView;
 
 import com.hannesdorfmann.mosby.conductor.viewstate.MvpViewStateController;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import fr.guddy.androidstarteralt.R;
 import fr.guddy.androidstarteralt.persistence.entities.Repo;
 import hugo.weaving.DebugLog;
@@ -27,18 +28,19 @@ public class ControllerRepoDetail
     //endregion
 
     //region Injected views
-    @Bind(R.id.ControllerRepoDetail_TextView_Description)
+    @BindView(R.id.ControllerRepoDetail_TextView_Description)
     TextView mTextViewDescription;
-    @Bind(R.id.ControllerRepoDetail_TextView_Url)
+    @BindView(R.id.ControllerRepoDetail_TextView_Url)
     TextView mTextViewUrl;
-    @Bind(R.id.ControllerRepoDetail_TextView_Empty)
+    @BindView(R.id.ControllerRepoDetail_TextView_Empty)
     TextView mTextViewEmpty;
-    @Bind(R.id.ControllerRepoDetail_TextView_Error)
+    @BindView(R.id.ControllerRepoDetail_TextView_Error)
     TextView mTextViewError;
-    @Bind(R.id.ControllerRepoDetail_ProgressBar_Loading)
+    @BindView(R.id.ControllerRepoDetail_ProgressBar_Loading)
     ProgressBar mProgressBarLoading;
-    @Bind(R.id.ControllerRepoDetail_ContentView)
+    @BindView(R.id.ControllerRepoDetail_ContentView)
     LinearLayout mContentView;
+    private Unbinder mUnbinder;
     //endregion
 
     //region Default constructor
@@ -57,7 +59,7 @@ public class ControllerRepoDetail
     protected View onCreateView(@NonNull final LayoutInflater poInflater, @NonNull final ViewGroup poContainer) {
         final View loView = poInflater.inflate(R.layout.controller_repo_detail, poContainer, false);
 
-        ButterKnife.bind(this, loView);
+        mUnbinder = ButterKnife.bind(this, loView);
 
         mSwitcher = new Switcher.Builder()
                 .withEmptyView(mTextViewEmpty)
@@ -67,6 +69,12 @@ public class ControllerRepoDetail
                 .build();
 
         return loView;
+    }
+
+    @Override
+    protected void onDestroyView(@NonNull final View poView) {
+        mUnbinder.unbind();
+        super.onDestroyView(poView);
     }
     //endregion
 

@@ -16,8 +16,10 @@ import com.hannesdorfmann.mosby.conductor.viewstate.MvpViewStateController;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import fr.guddy.androidstarteralt.R;
 import fr.guddy.androidstarteralt.mvp.changehandlers.CircularRevealChangeHandlerCompat;
 import fr.guddy.androidstarteralt.mvp.repoDetail.ControllerRepoDetail;
@@ -34,18 +36,18 @@ public class ControllerRepoList
         implements RepoListMvp.View, ViewEventListener<Repo>, SwipeRefreshLayout.OnRefreshListener {
 
     //region Injected views
-    @Bind(R.id.ControllerRepoList_ProgressBar_Loading)
+    @BindView(R.id.ControllerRepoList_ProgressBar_Loading)
     ProgressBar mProgressBarLoading;
-    @Bind(R.id.ControllerRepoList_RecyclerView)
+    @BindView(R.id.ControllerRepoList_RecyclerView)
     RecyclerView mRecyclerView;
 
-    @Bind(R.id.ControllerRepoList_SwipeRefreshLayout_Empty)
+    @BindView(R.id.ControllerRepoList_SwipeRefreshLayout_Empty)
     SwipeRefreshLayout mSwipeRefreshLayoutEmpty;
-    @Bind(R.id.ControllerRepoList_SwipeRefreshLayout_Error)
+    @BindView(R.id.ControllerRepoList_SwipeRefreshLayout_Error)
     SwipeRefreshLayout mSwipeRefreshLayoutError;
-    @Bind(R.id.ControllerRepoList_SwipeRefreshLayout_Content)
+    @BindView(R.id.ControllerRepoList_SwipeRefreshLayout_Content)
     SwipeRefreshLayout mSwipeRefreshLayoutContent;
-    @Bind({
+    @BindViews({
             R.id.ControllerRepoList_SwipeRefreshLayout_Empty,
             R.id.ControllerRepoList_SwipeRefreshLayout_Error,
             R.id.ControllerRepoList_SwipeRefreshLayout_Content
@@ -65,6 +67,7 @@ public class ControllerRepoList
                     poView.setRefreshing(false);
 
     private Switcher mSwitcher;
+    private Unbinder mUnbinder;
     //endregion
 
     //region Constructor
@@ -77,7 +80,7 @@ public class ControllerRepoList
     @Override
     protected View onCreateView(@NonNull final LayoutInflater poInflater, @NonNull final ViewGroup poContainer) {
         final View loView = poInflater.inflate(R.layout.controller_repo_list, poContainer, false);
-        ButterKnife.bind(this, loView);
+        mUnbinder = ButterKnife.bind(this, loView);
 
         ButterKnife.apply(mSwipeRefreshLayouts, SET_LISTENER, this);
 
@@ -111,7 +114,7 @@ public class ControllerRepoList
 
     @Override
     protected void onDestroyView(final View poView) {
-        ButterKnife.unbind(this);
+        mUnbinder.unbind();
         super.onDestroyView(poView);
     }
 
@@ -129,10 +132,9 @@ public class ControllerRepoList
         if (piActionID == CellRepo.ROW_PRESSED) {
             final ControllerRepoDetail loVC = new ControllerRepoDetail(poRepo.getBaseId());
             final ControllerChangeHandler loChangeHandler = new CircularRevealChangeHandlerCompat(poView, mRecyclerView);
-            final RouterTransaction loTransaction = RouterTransaction.builder(loVC)
+            final RouterTransaction loTransaction = RouterTransaction.with(loVC)
                     .pushChangeHandler(loChangeHandler)
-                    .popChangeHandler(loChangeHandler)
-                    .build();
+                    .popChangeHandler(loChangeHandler);
             getRouter().pushController(loTransaction);
         }
     }

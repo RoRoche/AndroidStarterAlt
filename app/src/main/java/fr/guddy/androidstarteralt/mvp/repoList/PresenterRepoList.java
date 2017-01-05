@@ -3,7 +3,9 @@ package fr.guddy.androidstarteralt.mvp.repoList;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.birbit.android.jobqueue.JobManager;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
+import com.novoda.merlin.MerlinsBeard;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -16,7 +18,6 @@ import javax.inject.Inject;
 import autodagger.AutoInjector;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
 import fr.guddy.androidstarteralt.persistence.entities.RepoEntity;
-import fr.guddy.androidstarteralt.rest.queries.QueryFactory;
 import fr.guddy.androidstarteralt.rest.queries.QueryGetRepos;
 import hugo.weaving.DebugLog;
 import io.requery.Persistable;
@@ -36,7 +37,9 @@ public class PresenterRepoList extends MvpBasePresenter<RepoListMvp.View> implem
     @Inject
     SingleEntityStore<Persistable> dataStore;
     @Inject
-    QueryFactory queryFactory;
+    MerlinsBeard merlinsBeard;
+    @Inject
+    JobManager jobManager;
     //endregion
 
     //region Fields
@@ -124,7 +127,18 @@ public class PresenterRepoList extends MvpBasePresenter<RepoListMvp.View> implem
             loView.showLoading(pbPullToRefresh);
         }
 
-        queryFactory.startQueryGetRepos(context, "RoRoche", pbPullToRefresh);
+        final QueryGetRepos loQuery = new QueryGetRepos("RoRoche", pbPullToRefresh);
+        // If query requires network, and if network is unreachable, and if the query must not persist
+        if (loQuery.requiresNetwork() &&
+                !merlinsBeard.isConnected() &&
+                !loQuery.isPersistent()) {
+            // then, we post an event to notify the job could not be done because of network connectivity
+            loQuery.inject();
+            loQuery.postEventQueryFinishedNoNetwork();
+        } else {
+            // otherwise, we can add the job
+            jobManager.addJobInBackground(loQuery);
+        }
     }
     //endregion
 

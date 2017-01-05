@@ -37,7 +37,7 @@ public class QueryGetRepos extends AbstractQuery {
     //endregion
 
     //region Constructor matching super
-    protected QueryGetRepos(final String psUser, final boolean pbPullToRefresh) {
+    public QueryGetRepos(final String psUser, final boolean pbPullToRefresh) {
         super(Priority.MEDIUM);
         user = psUser;
         pullToRefresh = pbPullToRefresh;

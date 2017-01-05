@@ -1,7 +1,11 @@
 package fr.guddy.androidstarteralt.rest.queries;
 
-import com.path.android.jobqueue.Job;
-import com.path.android.jobqueue.Params;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
+import com.birbit.android.jobqueue.Job;
+import com.birbit.android.jobqueue.Params;
+import com.birbit.android.jobqueue.RetryConstraint;
 
 import fr.guddy.androidstarteralt.bus.event.AbstractEventQueryDidFinish;
 import hugo.weaving.DebugLog;
@@ -56,7 +60,12 @@ public abstract class AbstractQuery extends Job {
     }
 
     @Override
-    protected void onCancel() {
+    protected void onCancel(final int piCancelReason, @Nullable final Throwable poThrowable) {
+    }
+
+    @Override
+    protected RetryConstraint shouldReRunOnThrowable(@NonNull final Throwable poThrowable, final int piRunCount, final int piMaxRunCount) {
+        return null;
     }
 
     @DebugLog

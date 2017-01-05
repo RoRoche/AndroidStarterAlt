@@ -12,7 +12,7 @@ import com.squareup.picasso.RequestCreator;
 import javax.inject.Inject;
 
 import autodagger.AutoInjector;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
 import fr.guddy.androidstarteralt.R;
@@ -31,9 +31,9 @@ public class CellRepo extends BindableFrameLayout<RepoEntity> {
     //endregion
 
     //region Injected views
-    @Bind(R.id.CellRepo_TextView)
+    @BindView(R.id.CellRepo_TextView)
     TextView mTextView;
-    @Bind(R.id.CellRepo_ImageView_Avatar)
+    @BindView(R.id.CellRepo_ImageView_Avatar)
     ImageView mImageViewAvatar;
     //endregion
 

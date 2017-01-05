@@ -6,12 +6,13 @@ import android.view.ViewGroup;
 
 import com.bluelinelabs.conductor.Conductor;
 import com.bluelinelabs.conductor.Router;
+import com.bluelinelabs.conductor.RouterTransaction;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Inject;
 
 import autodagger.AutoInjector;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import fr.guddy.androidstarteralt.ApplicationAndroidStarter;
 import fr.guddy.androidstarteralt.IEnvironment;
@@ -36,7 +37,7 @@ public class ActivityMain extends AppCompatActivity {
     //endregion
 
     //region Injected views
-    @Bind(R.id.ActivityMain_ViewGroup_Container)
+    @BindView(R.id.ActivityMain_ViewGroup_Container)
     ViewGroup mViewGroupContainer;
     //endregion
 
@@ -71,7 +72,7 @@ public class ActivityMain extends AppCompatActivity {
 
         mRouter = Conductor.attachRouter(this, mViewGroupContainer, poSavedInstanceState);
         if (!mRouter.hasRootController()) {
-            mRouter.setRoot(new ControllerRepoList());
+            mRouter.setRoot(RouterTransaction.with(new ControllerRepoList()));
         }
     }
 

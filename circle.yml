@@ -16,7 +16,7 @@ dependencies:
     - ~/.android
     - ~/android
   override:
-    - (echo "Downloading Android SDK v24...")
+    - (echo "Downloading Android SDK v25...")
     - (source environmentSetup.sh && getAndroidSDK)
 
 test:

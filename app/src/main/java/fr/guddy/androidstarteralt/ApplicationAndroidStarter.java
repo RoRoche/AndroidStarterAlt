@@ -74,7 +74,6 @@ public class ApplicationAndroidStarter extends Application {
         } catch (final GeneralSecurityException poException) {
             if (BuildConfig.DEBUG) {
                 Logger.t(TAG).e(poException, null);
-                poException.printStackTrace();
             }
         }
 

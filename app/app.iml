@@ -35,6 +35,7 @@
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />
@@ -42,7 +43,6 @@
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -85,7 +85,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support.test/exposed-instrumentation-api-publish/0.5/jars" />
@@ -106,7 +105,9 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.birbit/android-priority-jobqueue/2.0.1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.bluelinelabs/conductor/2.0.4/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.bluelinelabs/conductor/2.0.6/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.facebook.conceal/conceal/1.1.3/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.facebook.stetho/stetho/1.4.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.fernandocejas.frodo/frodo-runtime/0.8.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.jkwiecien/Switcher/1.1.3/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.orhanobut/logger/1.12/jars" />
@@ -118,6 +119,8 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.jakewharton.hugo/hugo-runtime/1.2.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.novoda/merlin/0.8.0/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.orhanobut/hawk/2.0.1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.scottyab/aescrypt/0.0.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.nlopez.smartadapters/library/1.3.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-base/0.7.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-commons/0.7.0/jars" />
@@ -127,8 +130,9 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer-view/0.7.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.palaima.debugdrawer/debugdrawer/0.7.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.requery/requery-android/1.0.1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.requery/requery-android/1.1.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/jp.wasabeef/takt/1.0.2/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/net.zetetic/android-database-sqlcipher/3.5.4/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/se.emilsjolander/intentbuilder-api/0.14.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
@@ -158,33 +162,38 @@
     <orderEntry type="library" exported="" scope="TEST" name="robotium-solo-5.6.3" level="project" />
     <orderEntry type="library" exported="" name="hugo-annotations-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="intentbuilder-api-0.14.0" level="project" />
+    <orderEntry type="library" exported="" name="requery-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="dexmaker-1.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="runner-0.5" level="project" />
     <orderEntry type="library" exported="" name="viewstate-conductor-0.8.2" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-fps-0.7.0" level="project" />
+    <orderEntry type="library" exported="" name="aescrypt-0.0.1" level="project" />
     <orderEntry type="library" exported="" name="android-priority-jobqueue-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="scalpel-1.1.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="asm-5.0.4" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="asm-commons-5.0.4" level="project" />
+    <orderEntry type="library" exported="" name="commons-cli-1.2" level="project" />
     <orderEntry type="library" exported="" name="transition-25.1.0" level="project" />
+    <orderEntry type="library" exported="" name="stetho-1.4.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="dexmaker-mockito-1.2" level="project" />
-    <orderEntry type="library" exported="" name="requery-android-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="frodo-runtime-0.8.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="mockwebserver-3.5.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="guava-20.0" level="project" />
     <orderEntry type="library" exported="" name="okhttp-urlconnection-3.5.0" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-picasso-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="mvp-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="library-1.3.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="error_prone_annotations-2.0.8" level="project" />
+    <orderEntry type="library" exported="" name="storebox-lib-1.4.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-25.1.0" level="project" />
+    <orderEntry type="library" exported="" name="android-database-sqlcipher-3.5.4" level="project" />
     <orderEntry type="library" exported="" name="mvp-conductor-0.8.2" level="project" />
     <orderEntry type="library" exported="" name="jackson-core-2.5.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="byte-buddy-dep-0.6.10" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="exposed-instrumentation-api-publish-0.5" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-commons-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="autodagger2-1.1" level="project" />
-    <orderEntry type="library" exported="" name="rxjava-1.2.3" level="project" />
+    <orderEntry type="library" exported="" name="rxjava-1.2.5" level="project" />
     <orderEntry type="library" exported="" name="support-compat-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="logansquare-1.3.7" level="project" />
@@ -197,8 +206,8 @@
     <orderEntry type="library" exported="" name="support-vector-drawable-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="butterknife-annotations-8.4.0" level="project" />
     <orderEntry type="library" exported="" name="butterknife-8.4.0" level="project" />
+    <orderEntry type="library" exported="" name="hawk-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="converter-logansquare-1.4.1" level="project" />
-    <orderEntry type="library" exported="" name="requery-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="design-25.1.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="bcprov-jdk15on-1.50" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
@@ -206,35 +215,40 @@
     <orderEntry type="library" exported="" name="debugdrawer-view-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="hugo-runtime-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-25.1.0" level="project" />
+    <orderEntry type="library" exported="" name="requery-android-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="icepick-2.3.6" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.1.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="mockito-core-2.0.17-beta" level="project" />
     <orderEntry type="library" exported="" name="merlin-0.8.0" level="project" />
     <orderEntry type="library" exported="" name="jsr250-api-1.0" level="project" />
+    <orderEntry type="library" exported="" name="conceal-1.1.3" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-base-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="Switcher-1.1.3" level="project" />
+    <orderEntry type="library" exported="" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="objenesis-2.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.1.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="guava-19.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.4" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="rules-0.5" level="project" />
     <orderEntry type="library" exported="" name="retrofit-2.1.0" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="okhttp-testing-support-3.5.0" level="project" />
+    <orderEntry type="library" exported="" name="typetools-0.4.6" level="project" />
     <orderEntry type="library" exported="" name="aspectjrt-1.8.6" level="project" />
     <orderEntry type="library" exported="" name="rxandroid-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="okio-1.11.0" level="project" />
     <orderEntry type="library" exported="" name="eventbus-3.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="error_prone_annotations-2.0.12" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="debugdrawer-scalpel-0.7.0" level="project" />
     <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
     <orderEntry type="library" exported="" name="frodo-api-0.8.2" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="truth-0.30" level="project" />
     <orderEntry type="library" exported="" name="takt-1.0.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="viewstate-2.0.1" level="project" />
-    <orderEntry type="library" exported="" name="conductor-2.0.4" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="truth-0.31" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.1.0" level="project" />
+    <orderEntry type="library" exported="" name="conductor-2.0.6" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="annotation-3.0.2" level="project" />
     <orderEntry type="library" exported="" name="localify-1.0.0" level="project" />

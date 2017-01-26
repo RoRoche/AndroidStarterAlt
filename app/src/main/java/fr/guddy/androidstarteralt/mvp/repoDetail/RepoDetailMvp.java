@@ -15,16 +15,6 @@ import icepick.Icicle;
 
 public interface RepoDetailMvp {
 
-    //region Model
-    final class Model implements Serializable {
-        public final Repo repo;
-
-        public Model(final Repo poRepo) {
-            repo = poRepo;
-        }
-    }
-    //endregion
-
     //region View
     interface View extends MvpLceView<Model> {
         void showEmpty();
@@ -34,6 +24,16 @@ public interface RepoDetailMvp {
     //region Presenter
     interface Presenter extends MvpPresenter<View> {
         void loadRepo(final long plRepoId, final boolean pbPullToRefresh);
+    }
+    //endregion
+
+    //region Model
+    final class Model implements Serializable {
+        public final Repo repo;
+
+        public Model(final Repo poRepo) {
+            repo = poRepo;
+        }
     }
     //endregion
 

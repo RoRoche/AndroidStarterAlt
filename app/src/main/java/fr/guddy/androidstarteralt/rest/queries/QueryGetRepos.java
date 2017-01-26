@@ -21,6 +21,12 @@ import retrofit2.Response;
 @AutoInjector(ApplicationAndroidStarter.class)
 public class QueryGetRepos extends AbstractQuery {
 
+    //region Fields
+    public final boolean pullToRefresh;
+    public final String user;
+    transient public List<DTORepo> results;
+    //endregion
+
     //region Injected fields
     @Inject
     transient GitHubService gitHubService;
@@ -28,12 +34,6 @@ public class QueryGetRepos extends AbstractQuery {
     transient EventBus eventBus;
     @Inject
     transient SingleEntityStore<Persistable> dataStore;
-    //endregion
-
-    //region Fields
-    public final boolean pullToRefresh;
-    public final String user;
-    transient public List<DTORepo> results;
     //endregion
 
     //region Constructor matching super
@@ -45,11 +45,6 @@ public class QueryGetRepos extends AbstractQuery {
     //endregion
 
     //region Overridden method
-    @Override
-    public void inject() {
-        ApplicationAndroidStarter.sharedApplication().componentApplication().inject(this);
-    }
-
     @Override
     protected void execute() throws Exception {
         inject();
@@ -77,6 +72,10 @@ public class QueryGetRepos extends AbstractQuery {
     protected void postEventQueryFinished() {
         final EventQueryGetReposDidFinish loEvent = new EventQueryGetReposDidFinish(this, mSuccess, mErrorType, mThrowable, pullToRefresh, results);
         eventBus.post(loEvent);
+    }
+    @Override
+    public void inject() {
+        ApplicationAndroidStarter.sharedApplication().componentApplication().inject(this);
     }
 
     @Override

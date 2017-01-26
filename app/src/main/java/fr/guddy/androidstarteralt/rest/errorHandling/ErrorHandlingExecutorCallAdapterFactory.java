@@ -87,16 +87,6 @@ public class ErrorHandlingExecutorCallAdapterFactory extends CallAdapter.Factory
         }
 
         @Override
-        public void enqueue(final Callback<T> poCallback) {
-            mDelegate.enqueue(new ExecutorCallback<>(mCallbackExecutor, poCallback, mRetrofit));
-        }
-
-        @Override
-        public boolean isExecuted() {
-            return mDelegate.isExecuted();
-        }
-
-        @Override
         public Response<T> execute() throws IOException {
             Response<T> loResponse;
 
@@ -120,6 +110,16 @@ public class ErrorHandlingExecutorCallAdapterFactory extends CallAdapter.Factory
         }
 
         @Override
+        public void enqueue(final Callback<T> poCallback) {
+            mDelegate.enqueue(new ExecutorCallback<>(mCallbackExecutor, poCallback, mRetrofit));
+        }
+
+        @Override
+        public boolean isExecuted() {
+            return mDelegate.isExecuted();
+        }
+
+        @Override
         public void cancel() {
             mDelegate.cancel();
         }
@@ -129,15 +129,15 @@ public class ErrorHandlingExecutorCallAdapterFactory extends CallAdapter.Factory
             return mDelegate.isCanceled();
         }
 
+        @Override
+        public Request request() {
+            return mDelegate.request();
+        }
+
         @SuppressWarnings("CloneDoesntCallSuperClone") // Performing deep clone.
         @Override
         public Call<T> clone() {
             return new ExecutorCallbackCall<>(mCallbackExecutor, mDelegate.clone(), mRetrofit);
-        }
-
-        @Override
-        public Request request() {
-            return mDelegate.request();
         }
     }
 

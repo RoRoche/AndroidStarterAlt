@@ -3,9 +3,14 @@ package fr.guddy.androidstarteralt;
 import android.app.Application;
 import android.os.StrictMode;
 
+import com.facebook.stetho.Stetho;
 import com.novoda.merlin.Merlin;
+import com.orhanobut.hawk.Hawk;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
+import com.scottyab.aescrypt.AESCrypt;
+
+import java.security.GeneralSecurityException;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -60,7 +65,18 @@ public class ApplicationAndroidStarter extends Application {
         Logger.init(TAG)
                 .logLevel(LogLevel.FULL);
 
-        buildComponent();
+        Hawk.init(this).build();
+
+        Stetho.initializeWithDefaults(this);
+
+        try {
+            buildComponent();
+        } catch (final GeneralSecurityException poException) {
+            if (BuildConfig.DEBUG) {
+                Logger.t(TAG).e(poException, null);
+                poException.printStackTrace();
+            }
+        }
 
         mComponentApplication.inject(this);
         merlin.bind();
@@ -80,22 +96,27 @@ public class ApplicationAndroidStarter extends Application {
     }
     //endregion
 
-    //region Getters
-    public ApplicationAndroidStarterComponent componentApplication() {
-        return mComponentApplication;
-    }
-    //endregion
-
     //region Protected methods
-    protected void buildComponent() {
+    protected void buildComponent() throws GeneralSecurityException {
+        final String lsKey = getString(R.string.base_url_key);
+        final String lsValue = getString(R.string.base_url_value);
+
+        final String lsBaseUrl = AESCrypt.decrypt(lsKey, lsValue);
+
         mComponentApplication = DaggerApplicationAndroidStarterComponent.builder()
                 .moduleAsync(new ModuleAsync())
                 .moduleBus(new ModuleBus())
                 .moduleContext(new ModuleContext(getApplicationContext()))
                 .moduleDatabase(new ModuleDatabase())
                 .moduleEnvironment(new ModuleEnvironment())
-                .moduleRest(new ModuleRest())
+                .moduleRest(new ModuleRest(lsBaseUrl))
                 .build();
+    }
+    //endregion
+
+    //region Getters
+    public ApplicationAndroidStarterComponent componentApplication() {
+        return mComponentApplication;
     }
     //endregion
 }

@@ -25,6 +25,7 @@ public class ControllerRepoDetail
     //region Fields
     private final long mItemId;
     private Switcher mSwitcher;
+    private Unbinder mUnbinder;
     //endregion
 
     //region Injected views
@@ -40,10 +41,9 @@ public class ControllerRepoDetail
     ProgressBar mProgressBarLoading;
     @BindView(R.id.ControllerRepoDetail_ContentView)
     LinearLayout mContentView;
-    private Unbinder mUnbinder;
     //endregion
 
-    //region Default constructor
+    //region Constructors
     public ControllerRepoDetail(final long plItemId) {
         mItemId = plItemId;
     }
@@ -93,13 +93,13 @@ public class ControllerRepoDetail
     }
 
     @Override
-    public void showContent() {
-        mSwitcher.showContentView();
+    public void showLoading(final boolean pbPullToRefresh) {
+        mSwitcher.showProgressView();
     }
 
     @Override
-    public void showLoading(final boolean pbPullToRefresh) {
-        mSwitcher.showProgressView();
+    public void showContent() {
+        mSwitcher.showContentView();
     }
 
     @Override
@@ -122,6 +122,12 @@ public class ControllerRepoDetail
     }
     //endregion
 
+    //region Specific method
+    private void configureViewWithRepo(@NonNull final Repo poRepo) {
+        mTextViewDescription.setText(poRepo.getDescription());
+        mTextViewUrl.setText(poRepo.getUrl());
+    }
+
     //region ViewState
     @DebugLog
     @NonNull
@@ -133,18 +139,12 @@ public class ControllerRepoDetail
     @Override
     public void onViewStateInstanceRestored(final boolean pbInstanceStateRetained) {
     }
+    //endregion
 
     @DebugLog
     @Override
     public void onNewViewStateInstance() {
         loadData(false);
-    }
-    //endregion
-
-    //region Specific method
-    private void configureViewWithRepo(@NonNull final Repo poRepo) {
-        mTextViewDescription.setText(poRepo.getDescription());
-        mTextViewUrl.setText(poRepo.getUrl());
     }
     //endregion
 }

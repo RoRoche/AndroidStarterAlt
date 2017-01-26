@@ -31,11 +31,6 @@ import jp.wasabeef.takt.Takt;
 @AutoInjector(ApplicationAndroidStarter.class)
 public class ActivityMain extends AppCompatActivity {
 
-    //region Fields
-    private DebugDrawer mDebugDrawer;
-    private Router mRouter;
-    //endregion
-
     //region Injected views
     @BindView(R.id.ActivityMain_ViewGroup_Container)
     ViewGroup mViewGroupContainer;
@@ -46,6 +41,11 @@ public class ActivityMain extends AppCompatActivity {
     Picasso mPicasso;
     @Inject
     IEnvironment mEnvironment;
+    //endregion
+
+    //region Fields
+    private DebugDrawer mDebugDrawer;
+    private Router mRouter;
     //endregion
 
     //region Lifecycle

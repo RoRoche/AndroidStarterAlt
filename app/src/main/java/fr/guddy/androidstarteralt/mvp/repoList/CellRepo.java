@@ -51,6 +51,12 @@ public class CellRepo extends BindableFrameLayout<RepoEntity> {
     }
 
     @Override
+    public void onViewInflated() {
+        super.onViewInflated();
+        ButterKnife.bind(this);
+    }
+
+    @Override
     public void bind(@NonNull final RepoEntity poRepo) {
         mTextView.setText(poRepo.getUrl());
 
@@ -65,12 +71,6 @@ public class CellRepo extends BindableFrameLayout<RepoEntity> {
         setOnClickListener((final View poView) ->
                 notifyItemAction(ROW_PRESSED)
         );
-    }
-
-    @Override
-    public void onViewInflated() {
-        super.onViewInflated();
-        ButterKnife.bind(this);
     }
     //endregion
 }

@@ -32,7 +32,6 @@ public final class PresenterRepoDetail extends MvpBasePresenter<RepoDetailMvp.Vi
     }
     //endregion
 
-
     //region Overridden method
     @Override
     public void detachView(final boolean pbRetainInstance) {
@@ -40,6 +39,16 @@ public final class PresenterRepoDetail extends MvpBasePresenter<RepoDetailMvp.Vi
         if (!pbRetainInstance) {
             unsubscribe();
         }
+    }
+    //endregion
+
+    //region Specific job
+    private void unsubscribe() {
+        if (mSubscriptionGetRepo != null && !mSubscriptionGetRepo.isUnsubscribed()) {
+            mSubscriptionGetRepo.unsubscribe();
+        }
+
+        mSubscriptionGetRepo = null;
     }
     //endregion
 
@@ -91,16 +100,6 @@ public final class PresenterRepoDetail extends MvpBasePresenter<RepoDetailMvp.Vi
                         // onCompleted
                         this::unsubscribe
                 );
-    }
-    //endregion
-
-    //region Specific job
-    private void unsubscribe() {
-        if (mSubscriptionGetRepo != null && !mSubscriptionGetRepo.isUnsubscribed()) {
-            mSubscriptionGetRepo.unsubscribe();
-        }
-
-        mSubscriptionGetRepo = null;
     }
     //endregion
 }

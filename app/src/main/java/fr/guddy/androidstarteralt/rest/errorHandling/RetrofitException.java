@@ -13,38 +13,6 @@ import retrofit2.Retrofit;
 
 public class RetrofitException extends RuntimeException {
 
-    public static RetrofitException httpError(@NonNull final String psUrl, @NonNull final Response poResponse, @NonNull final Retrofit poRetrofit) {
-        final String lsMessage = poResponse.code() + " " + poResponse.message();
-        return new RetrofitException(lsMessage, psUrl, poResponse, Kind.HTTP, null, poRetrofit);
-    }
-
-    public static RetrofitException networkError(@NonNull final IOException poException) {
-        return new RetrofitException(poException.getMessage(), null, null, Kind.NETWORK, poException, null);
-    }
-
-    public static RetrofitException unexpectedError(@NonNull final Throwable poException) {
-        return new RetrofitException(poException.getMessage(), null, null, Kind.UNEXPECTED, poException, null);
-    }
-
-    /**
-     * Identifies the event kind which triggered a {@link RetrofitException}.
-     */
-    public enum Kind {
-        /**
-         * An {@link IOException} occurred while communicating to the server.
-         */
-        NETWORK,
-        /**
-         * A non-200 HTTP status code was received from the server.
-         */
-        HTTP,
-        /**
-         * An internal error occurred while attempting to execute a request. It is best practice to
-         * re-throw this exception so your application crashes.
-         */
-        UNEXPECTED
-    }
-
     private final String mUrl;
     private final Response mResponse;
     private final Kind mKind;
@@ -61,6 +29,19 @@ public class RetrofitException extends RuntimeException {
         mResponse = poResponse;
         mKind = poKind;
         mRetrofit = poRetrofit;
+    }
+
+    public static RetrofitException httpError(@NonNull final String psUrl, @NonNull final Response poResponse, @NonNull final Retrofit poRetrofit) {
+        final String lsMessage = poResponse.code() + " " + poResponse.message();
+        return new RetrofitException(lsMessage, psUrl, poResponse, Kind.HTTP, null, poRetrofit);
+    }
+
+    public static RetrofitException networkError(@NonNull final IOException poException) {
+        return new RetrofitException(poException.getMessage(), null, null, Kind.NETWORK, poException, null);
+    }
+
+    public static RetrofitException unexpectedError(@NonNull final Throwable poException) {
+        return new RetrofitException(poException.getMessage(), null, null, Kind.UNEXPECTED, poException, null);
     }
 
     /**
@@ -103,5 +84,24 @@ public class RetrofitException extends RuntimeException {
         }
         final Converter<ResponseBody, T> loConverter = mRetrofit.responseBodyConverter(poType, new Annotation[0]);
         return loConverter.convert(mResponse.errorBody());
+    }
+
+    /**
+     * Identifies the event kind which triggered a {@link RetrofitException}.
+     */
+    public enum Kind {
+        /**
+         * An {@link IOException} occurred while communicating to the server.
+         */
+        NETWORK,
+        /**
+         * A non-200 HTTP status code was received from the server.
+         */
+        HTTP,
+        /**
+         * An internal error occurred while attempting to execute a request. It is best practice to
+         * re-throw this exception so your application crashes.
+         */
+        UNEXPECTED
     }
 }

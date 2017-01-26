@@ -1,7 +1,6 @@
 package fr.guddy.androidstarteralt.tests.parsing;
 
 import android.support.test.InstrumentationRegistry;
-import android.test.suitebuilder.annotation.LargeTest;
 
 import com.bluelinelabs.logansquare.LoganSquare;
 import com.github.polok.localify.LocalifyClient;
@@ -21,7 +20,6 @@ import fr.guddy.androidstarteralt.test.R;
 import static com.google.common.truth.Truth.assertThat;
 
 @RunWith(FrutillaTestRunner.class)
-@LargeTest
 public class TestParsing {
 
     //region Fields

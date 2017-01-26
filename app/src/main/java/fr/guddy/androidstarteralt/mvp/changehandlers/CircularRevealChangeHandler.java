@@ -52,17 +52,6 @@ public class CircularRevealChangeHandler extends AnimatorChangeHandler {
      *
      * @param fromView              The view from which the circular reveal should originate
      * @param containerView         The view that hosts fromView
-     * @param removesFromViewOnPush If true, the view being replaced will be removed from the view hierarchy on pushes
-     */
-    public CircularRevealChangeHandler(@NonNull View fromView, @NonNull View containerView, boolean removesFromViewOnPush) {
-        this(fromView, containerView, DEFAULT_ANIMATION_DURATION, true);
-    }
-
-    /**
-     * Constructor that will create a circular reveal from the center of the fromView parameter.
-     *
-     * @param fromView              The view from which the circular reveal should originate
-     * @param containerView         The view that hosts fromView
      * @param duration              The duration of the animation
      * @param removesFromViewOnPush If true, the view being replaced will be removed from the view hierarchy on pushes
      */
@@ -83,6 +72,17 @@ public class CircularRevealChangeHandler extends AnimatorChangeHandler {
     }
 
     /**
+     * Constructor that will create a circular reveal from the center of the fromView parameter.
+     *
+     * @param fromView              The view from which the circular reveal should originate
+     * @param containerView         The view that hosts fromView
+     * @param removesFromViewOnPush If true, the view being replaced will be removed from the view hierarchy on pushes
+     */
+    public CircularRevealChangeHandler(@NonNull View fromView, @NonNull View containerView, boolean removesFromViewOnPush) {
+        this(fromView, containerView, DEFAULT_ANIMATION_DURATION, true);
+    }
+
+    /**
      * Constructor that will create a circular reveal from the center point passed in.
      *
      * @param cx The center's x-axis
@@ -90,6 +90,20 @@ public class CircularRevealChangeHandler extends AnimatorChangeHandler {
      */
     public CircularRevealChangeHandler(int cx, int cy) {
         this(cx, cy, DEFAULT_ANIMATION_DURATION, true);
+    }
+
+    /**
+     * Constructor that will create a circular reveal from the center point passed in.
+     *
+     * @param cx                    The center's x-axis
+     * @param cy                    The center's y-axis
+     * @param duration              The duration of the animation
+     * @param removesFromViewOnPush If true, the view being replaced will be removed from the view hierarchy on pushes
+     */
+    public CircularRevealChangeHandler(int cx, int cy, long duration, boolean removesFromViewOnPush) {
+        super(duration, removesFromViewOnPush);
+        mCx = cx;
+        mCy = cy;
     }
 
     /**
@@ -115,18 +129,18 @@ public class CircularRevealChangeHandler extends AnimatorChangeHandler {
 
     }
 
-    /**
-     * Constructor that will create a circular reveal from the center point passed in.
-     *
-     * @param cx                    The center's x-axis
-     * @param cy                    The center's y-axis
-     * @param duration              The duration of the animation
-     * @param removesFromViewOnPush If true, the view being replaced will be removed from the view hierarchy on pushes
-     */
-    public CircularRevealChangeHandler(int cx, int cy, long duration, boolean removesFromViewOnPush) {
-        super(duration, removesFromViewOnPush);
-        mCx = cx;
-        mCy = cy;
+    @Override
+    public void saveToBundle(@NonNull Bundle bundle) {
+        super.saveToBundle(bundle);
+        bundle.putInt(KEY_CX, mCx);
+        bundle.putInt(KEY_CY, mCy);
+    }
+
+    @Override
+    public void restoreFromBundle(@NonNull Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        mCx = bundle.getInt(KEY_CX);
+        mCy = bundle.getInt(KEY_CY);
     }
 
     @Override
@@ -143,19 +157,5 @@ public class CircularRevealChangeHandler extends AnimatorChangeHandler {
 
     @Override
     protected void resetFromView(@NonNull View from) {
-    }
-
-    @Override
-    public void saveToBundle(@NonNull Bundle bundle) {
-        super.saveToBundle(bundle);
-        bundle.putInt(KEY_CX, mCx);
-        bundle.putInt(KEY_CY, mCy);
-    }
-
-    @Override
-    public void restoreFromBundle(@NonNull Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        mCx = bundle.getInt(KEY_CX);
-        mCy = bundle.getInt(KEY_CY);
     }
 }

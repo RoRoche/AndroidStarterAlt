@@ -129,14 +129,14 @@ dependencies {
 
     provided 'javax.annotation:jsr250-api:1.0'
 
-    compile 'io.requery:requery:1.0.1'
-    compile 'io.requery:requery-android:1.0.1'
-    apt 'io.requery:requery-processor:1.0.1'
+    compile 'io.requery:requery:1.1.1'
+    compile 'io.requery:requery-android:1.1.1'
+    apt 'io.requery:requery-processor:1.1.1'
 
     compile 'com.github.orhanobut:logger:1.12'
 
     compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'io.reactivex:rxjava:1.2.3'
+    compile 'io.reactivex:rxjava:1.2.5'
 
     compile 'com.birbit:android-priority-jobqueue:2.0.1'
 
@@ -150,7 +150,7 @@ dependencies {
     compile 'com.hannesdorfmann.mosby:viewstate:2.0.1'
     compile 'com.hannesdorfmann.mosby:mvp-conductor:0.8.2'
     compile 'com.hannesdorfmann.mosby:viewstate-conductor:0.8.2'
-    compile 'com.bluelinelabs:conductor:2.0.4'
+    compile 'com.bluelinelabs:conductor:2.0.6'
 
     compile('com.github.polok.localify:localify:1.0.0') {
         exclude group: 'io.reactivex', module: 'rxjava'
@@ -169,6 +169,11 @@ dependencies {
     compile 'io.palaima.debugdrawer:debugdrawer-fps:0.7.0'
     compile 'com.jakewharton.scalpel:scalpel:1.1.2'
     compile 'jp.wasabeef:takt:1.0.2'
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'net.orange-box.storebox:storebox-lib:1.4.0'
+    compile 'com.orhanobut:hawk:2.0.1'
+    compile 'net.zetetic:android-database-sqlcipher:3.5.4@aar'
+    compile 'com.scottyab:aescrypt:0.0.1'
 
     // Testing-only dependencies
     testCompile 'junit:junit:4.12'
@@ -182,7 +187,7 @@ dependencies {
     androidTestCompile 'com.android.support.test:rules:0.5'
     androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.6.3'
     androidTestCompile 'com.squareup.okhttp3:mockwebserver:3.5.0'
-    androidTestCompile 'com.google.truth:truth:0.30'
+    androidTestCompile 'com.google.truth:truth:0.31'
     androidTestCompile 'com.github.ignaciotcrespo:frutilla:0.7.1'
     androidTestCompile 'org.mockito:mockito-core:2.0.17-beta'
     androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'

@@ -35,12 +35,25 @@ public class ControllerRepoList
         extends MvpViewStateController<RepoListMvp.View, RepoListMvp.Presenter, RepoListMvp.ViewState>
         implements RepoListMvp.View, ViewEventListener<Repo>, SwipeRefreshLayout.OnRefreshListener {
 
+    //region Fields
+    static final ButterKnife.Setter<SwipeRefreshLayout, SwipeRefreshLayout.OnRefreshListener> SET_LISTENER =
+            (@NonNull final SwipeRefreshLayout poView, @NonNull final SwipeRefreshLayout.OnRefreshListener poListener, final int piIndex)
+                    ->
+                    poView.setOnRefreshListener(poListener);
+    static final ButterKnife.Action<SwipeRefreshLayout> STOP_REFRESHING =
+            (@NonNull final SwipeRefreshLayout poView, final int piIndex)
+                    ->
+                    poView.setRefreshing(false);
+
+    private Switcher mSwitcher;
+    private Unbinder mUnbinder;
+    //endregion
+
     //region Injected views
     @BindView(R.id.ControllerRepoList_ProgressBar_Loading)
     ProgressBar mProgressBarLoading;
     @BindView(R.id.ControllerRepoList_RecyclerView)
     RecyclerView mRecyclerView;
-
     @BindView(R.id.ControllerRepoList_SwipeRefreshLayout_Empty)
     SwipeRefreshLayout mSwipeRefreshLayoutEmpty;
     @BindView(R.id.ControllerRepoList_SwipeRefreshLayout_Error)
@@ -53,21 +66,6 @@ public class ControllerRepoList
             R.id.ControllerRepoList_SwipeRefreshLayout_Content
     })
     List<SwipeRefreshLayout> mSwipeRefreshLayouts;
-    //endregion
-
-    //region Fields
-    static final ButterKnife.Setter<SwipeRefreshLayout, SwipeRefreshLayout.OnRefreshListener> SET_LISTENER =
-            (@NonNull final SwipeRefreshLayout poView, @NonNull final SwipeRefreshLayout.OnRefreshListener poListener, final int piIndex)
-                    ->
-                    poView.setOnRefreshListener(poListener);
-
-    static final ButterKnife.Action<SwipeRefreshLayout> STOP_REFRESHING =
-            (@NonNull final SwipeRefreshLayout poView, final int piIndex)
-                    ->
-                    poView.setRefreshing(false);
-
-    private Switcher mSwitcher;
-    private Unbinder mUnbinder;
     //endregion
 
     //region Constructor
@@ -96,9 +94,14 @@ public class ControllerRepoList
     }
 
     @Override
-    protected void onRestoreInstanceState(@NonNull final Bundle poSavedInstanceState) {
-        super.onRestoreInstanceState(poSavedInstanceState);
-        Icepick.restoreInstanceState(this, poSavedInstanceState);
+    protected void onDestroyView(@NonNull final View poView) {
+        mUnbinder.unbind();
+        super.onDestroyView(poView);
+    }
+
+    @Override
+    protected void onAttach(@NonNull final View poView) {
+        super.onAttach(poView);
     }
 
     @Override
@@ -108,20 +111,15 @@ public class ControllerRepoList
     }
 
     @Override
-    protected void onAttach(@NonNull final View poView) {
-        super.onAttach(poView);
-    }
-
-    @Override
-    protected void onDestroyView(final View poView) {
-        mUnbinder.unbind();
-        super.onDestroyView(poView);
-    }
-
-    @Override
     public void onSaveInstanceState(@NonNull final Bundle poOutState) {
         super.onSaveInstanceState(poOutState);
         Icepick.saveInstanceState(this, poOutState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull final Bundle poSavedInstanceState) {
+        super.onRestoreInstanceState(poSavedInstanceState);
+        Icepick.restoreInstanceState(this, poSavedInstanceState);
     }
     //endregion
 
@@ -130,7 +128,7 @@ public class ControllerRepoList
     @Override
     public void onViewEvent(final int piActionID, final Repo poRepo, final int piPosition, final View poView) {
         if (piActionID == CellRepo.ROW_PRESSED) {
-            final ControllerRepoDetail loVC = new ControllerRepoDetail(poRepo.getBaseId());
+            final ControllerRepoDetail loVC = new ControllerRepoDetail(((Repo) poRepo).getBaseId());
             final ControllerChangeHandler loChangeHandler = new CircularRevealChangeHandlerCompat(poView, mRecyclerView);
             final RouterTransaction loTransaction = RouterTransaction.with(loVC)
                     .pushChangeHandler(loChangeHandler)

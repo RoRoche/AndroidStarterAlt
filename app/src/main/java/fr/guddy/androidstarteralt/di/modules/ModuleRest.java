@@ -23,6 +23,16 @@ import retrofit2.Retrofit;
 @Module
 public class ModuleRest {
 
+    private final String mBaseUrl;
+
+    public ModuleRest(@NonNull final String psBaseUrl) {
+        mBaseUrl = psBaseUrl;
+    }
+
+    public ModuleRest() {
+        mBaseUrl = null;
+    }
+
     @Provides
     @Singleton
     public OkHttpClient provideOkHttpClient(@NonNull final IEnvironment poEnvironment) {
@@ -37,7 +47,7 @@ public class ModuleRest {
     @Singleton
     public GitHubService provideGithubService(@NonNull final OkHttpClient poOkHttpClient) {
         final Retrofit loRetrofit = new Retrofit.Builder()
-                .baseUrl("https://api.github.com")
+                .baseUrl(mBaseUrl)
                 .client(poOkHttpClient)
                 .addConverterFactory(LoganSquareConverterFactory.create())
                 .addCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory.MainThreadExecutor()))

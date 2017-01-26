@@ -12,20 +12,11 @@ import hugo.weaving.DebugLog;
 
 public abstract class AbstractQuery extends Job {
 
-    protected enum Priority {
-        LOW(0),
-        MEDIUM(500),
-        HIGH(1000);
-        private final int value;
-
-        Priority(final int piValue) {
-            value = piValue;
-        }
-    }
-
+    //region Fields
     protected boolean mSuccess;
     protected Throwable mThrowable;
     protected AbstractEventQueryDidFinish.ErrorType mErrorType;
+    //endregion
 
     //region Protected constructor
     protected AbstractQuery(final Priority poPriority) {
@@ -73,15 +64,26 @@ public abstract class AbstractQuery extends Job {
     protected int getRetryLimit() {
         return 1;
     }
+
+    protected abstract void execute() throws Exception;
     //endregion
 
     //region Protected abstract method for specific job
     public abstract void inject();
 
-    protected abstract void execute() throws Exception;
-
     protected abstract void postEventQueryFinished();
 
     public abstract void postEventQueryFinishedNoNetwork();
+
+    protected enum Priority {
+        LOW(0),
+        MEDIUM(500),
+        HIGH(1000);
+        private final int value;
+
+        Priority(final int piValue) {
+            value = piValue;
+        }
+    }
     //endregion
 }

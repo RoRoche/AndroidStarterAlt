@@ -71,6 +71,6 @@ grep -REo '(http|https)://[^/"]+' . | grep -v 'Binary\|retrofit2\|android.com'
 
 ## Other
 
-- [ ][Androwarn](https://github.com/maaaaz/androwarn/)?
-- [ ][devknox](https://devknox.io/)?
-- [ ][Inspeckage](https://github.com/ac-pm/Inspeckage)?
+- [ ] [Androwarn](https://github.com/maaaaz/androwarn/)?
+- [ ] [devknox](https://devknox.io/)?
+- [ ] [Inspeckage](https://github.com/ac-pm/Inspeckage)?

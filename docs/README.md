@@ -49,13 +49,29 @@ grep -REo '(http|https)://[^/"]+' . | grep -v 'Binary\|retrofit2\|android.com'
 
 ### SQLite databases: [SQLCipher](https://github.com/sqlcipher/android-database-sqlcipher)
 
-- [DbFlow](https://github.com/Raizlabs/DBFlow)
 - [requery](https://github.com/requery/requery/wiki/Android)
+
+```java
+new SqlCipherDatabaseSource(context, Models.DEFAULT, "db_name.sqlite", "db_password", DB_VERSION);
+```
+
+#### See also
+
+- [DbFlow](https://github.com/Raizlabs/DBFlow)
 
 ### URL storage
 
 * Encrypt URL related things
     - see [AESCrypt-Android](https://github.com/scottyab/AESCrypt-Android)
+
+For example, run the following code:
+
+```java
+String password = "android_starter_alt";
+String message = "https://api.github.com";
+String encryptedMsg = AESCrypt.encrypt(password, message);
+```
+And the `encryptedMsg` variable contains the value to store in source file and to decrypt at runtime.
 
 ## Server-side
 

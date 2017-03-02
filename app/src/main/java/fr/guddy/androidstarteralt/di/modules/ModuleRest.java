@@ -14,7 +14,6 @@ import dagger.Module;
 import dagger.Provides;
 import fr.guddy.androidstarteralt.IEnvironment;
 import fr.guddy.androidstarteralt.rest.GitHubService;
-import fr.guddy.androidstarteralt.rest.errorHandling.ErrorHandlingExecutorCallAdapterFactory;
 import io.palaima.debugdrawer.picasso.PicassoModule;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -50,7 +49,6 @@ public class ModuleRest {
                 .baseUrl(mBaseUrl)
                 .client(poOkHttpClient)
                 .addConverterFactory(LoganSquareConverterFactory.create())
-                .addCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory(new ErrorHandlingExecutorCallAdapterFactory.MainThreadExecutor()))
                 .build();
         return loRetrofit.create(GitHubService.class);
     }

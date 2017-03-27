@@ -15,12 +15,15 @@ import dagger.Provides;
 import fr.guddy.androidstarteralt.IEnvironment;
 import fr.guddy.androidstarteralt.rest.GitHubService;
 import io.palaima.debugdrawer.picasso.PicassoModule;
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 
 @Module
 public class ModuleRest {
+
+    private final static int CACHE_SIZE_BYTES = 1024 * 1024 * 10;
 
     private final String mBaseUrl;
 
@@ -34,11 +37,12 @@ public class ModuleRest {
 
     @Provides
     @Singleton
-    public OkHttpClient provideOkHttpClient(@NonNull final IEnvironment poEnvironment) {
+    public OkHttpClient provideOkHttpClient(@NonNull final IEnvironment poEnvironment, @NonNull final Context poContext) {
         final HttpLoggingInterceptor loHttpLoggingInterceptor = new HttpLoggingInterceptor();
         loHttpLoggingInterceptor.setLevel(poEnvironment.getHttpLoggingInterceptorLevel());
         return new OkHttpClient.Builder()
                 .addInterceptor(loHttpLoggingInterceptor)
+                .cache(new Cache(poContext.getCacheDir(), CACHE_SIZE_BYTES))
                 .build();
     }
 

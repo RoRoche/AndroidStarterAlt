@@ -128,7 +128,7 @@ public class ControllerRepoList
     @Override
     public void onViewEvent(final int piActionID, final Repo poRepo, final int piPosition, final View poView) {
         if (piActionID == CellRepo.ROW_PRESSED) {
-            final ControllerRepoDetail loVC = new ControllerRepoDetail(((Repo) poRepo).getBaseId());
+            final ControllerRepoDetail loVC = new ControllerRepoDetail(poRepo.getBaseId());
             final ControllerChangeHandler loChangeHandler = new CircularRevealChangeHandlerCompat(poView, mRecyclerView);
             final RouterTransaction loTransaction = RouterTransaction.with(loVC)
                     .pushChangeHandler(loChangeHandler)

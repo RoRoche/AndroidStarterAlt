@@ -47,10 +47,14 @@ public class QueryGetRepos extends AbstractQuery {
     //region Overridden method
     @Override
     protected void execute() throws Exception {
-        inject();
-
         final Call<List<DTORepo>> loCall = gitHubService.listRepos(user);
         final Response<List<DTORepo>> loExecute = loCall.execute();
+
+        if (isCached(loExecute)) {
+            // not modified, no need to do anything
+            return;
+        }
+
         results = loExecute.body();
 
         final int liDeleted = dataStore.delete(RepoEntity.class).get().value();
@@ -73,6 +77,7 @@ public class QueryGetRepos extends AbstractQuery {
         final EventQueryGetReposDidFinish loEvent = new EventQueryGetReposDidFinish(this, mSuccess, mErrorType, mThrowable, pullToRefresh, results);
         eventBus.post(loEvent);
     }
+
     @Override
     public void inject() {
         ApplicationAndroidStarter.sharedApplication().componentApplication().inject(this);

@@ -7,8 +7,11 @@ import com.birbit.android.jobqueue.Job;
 import com.birbit.android.jobqueue.Params;
 import com.birbit.android.jobqueue.RetryConstraint;
 
+import java.net.HttpURLConnection;
+
 import fr.guddy.androidstarteralt.bus.event.AbstractEventQueryDidFinish;
 import hugo.weaving.DebugLog;
+import retrofit2.Response;
 
 public abstract class AbstractQuery extends Job {
 
@@ -37,6 +40,7 @@ public abstract class AbstractQuery extends Job {
     @DebugLog
     @Override
     public void onRun() throws Throwable {
+        inject();
 
         try {
             execute();
@@ -64,12 +68,26 @@ public abstract class AbstractQuery extends Job {
     protected int getRetryLimit() {
         return 1;
     }
+    //endregion
 
-    protected abstract void execute() throws Exception;
+    //region Protected helper method
+    protected <T> boolean isCached(@NonNull final Response<T> poResponse) {
+        if (poResponse.isSuccessful() &&
+                (
+                        (poResponse.raw().networkResponse() != null && poResponse.raw().networkResponse().code() == HttpURLConnection.HTTP_NOT_MODIFIED)
+                                ||
+                                (poResponse.raw().networkResponse() == null && poResponse.raw().cacheResponse() != null))
+                ) {
+            return true;
+        }
+        return false;
+    }
     //endregion
 
     //region Protected abstract method for specific job
     public abstract void inject();
+
+    protected abstract void execute() throws Exception;
 
     protected abstract void postEventQueryFinished();
 
